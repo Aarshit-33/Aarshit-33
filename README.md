@@ -5,7 +5,7 @@
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white)](https://instagram.com/aarshit_jolapara/)
 
 
-I am a software Engineering Student. I love Programming <div style="width:100%;height:0;padding-bottom:73%;position:relative;"><iframe src="https://giphy.com/embed/QTfX9Ejfra3ZmNxh6B" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/stickers/tech-code-coding-QTfX9Ejfra3ZmNxh6B">via GIPHY</a></p> ,Listing Songs, Gaming and Traveling.
+I am a software Engineering Student. I love Programming <img src="https://giphy.com/stickers/tech-code-coding-QTfX9Ejfra3ZmNxh6B" /> ,Listing Songs, Gaming and Traveling.
 
 ```javascript
 const Aarshit = {

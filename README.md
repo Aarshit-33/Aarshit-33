@@ -53,4 +53,4 @@ const Aarshit = {
 <br />
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Aarshit-33&theme=midnight-purple&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
 
- <img src="assets/bye.png" width="65%" align="center" />
+ <img src="assets/bye.png" width="100%" align="center" />

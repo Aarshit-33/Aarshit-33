@@ -1,19 +1,20 @@
-<h2> Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">, I'm Aarshit Jolapara</h2>
+#
+<img src="assets/intro.png" width="100%" />
 
-I'm a Software Engineering Student. 
-    I love Programming <img src="assets/helloWorld.gif" width="40" /> ,Listing Songs <img src="assets/music.gif" width="40" />, Gaming <img src="assets/gaming.gif" width="40" /> and Traveling <img src="assets/travel.gif" width="40" />.
-
+# Somthing About Me :
 
 ```javascript
 const Aarshit = {
     pronouns: "He/Him",
-    code: ["HTML", "CSS", "JS", "PHP"],
-    Framework: ["Bootstrap","Tailwind","Wordpress"],
+    framework: ["Bootstrap","Tailwind","Wordpress"],
     tools: [VS Code, GitHub],
     askMeAbout: ["Database", "BackEnd", "FrontEnd", "Anything"],
     technologies: {
         backEnd: {
             code: ["PHP","JS"],
+        },
+        frontEnd: {
+            code: ["HTML","CSS","JS"],
         },
         mobileApp: {
             native: ["Still learning"]
@@ -22,13 +23,16 @@ const Aarshit = {
     },
 };
 ```
+
 # Follow Me :
 
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin&logoColor=white)](https://linkedin.com/in/aarshit-jolapara) &nbsp;
-[![Twitter Badge](https://img.shields.io/badge/-Twitter-00acee?style=flat-square&logo=Twitter&logoColor=white)](https://twitter.com/arshit_jolapara) &nbsp;
-[![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white)](https://instagram.com/aarshit_jolapara/) &nbsp;
+[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/aarshit-jolapara) &nbsp;
+[![G-mail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aarshitjolapara11@gmail.com) &nbsp;
+[![Twitter Badge](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/arshit_jolapara) &nbsp;
+[![Instagram Badge](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/aarshit_jolapara/) &nbsp;
+[![Facebook Badge](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com//aarshit.jolapara/) &nbsp;
 
-### 🛠 &nbsp;Languages and Tools :
+# 🛠 &nbsp;Languages and Tools :
 
 <p>
 <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
@@ -42,14 +46,10 @@ const Aarshit = {
 </p>
 
 
-### 📊 Github Stats :
+# 📊 Github Stats :
 
 ![Aarshit's GitHub stats](https://github-readme-stats.vercel.app/api?username=Aarshit-33&show_icons=true&theme=midnight-purple)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Aarshit-33&theme=midnight-purple&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
-
-# Contact Me :
-
-<a href="mailto:aarshitjolapara11@gmail.com">
- <img align="left" alt="Gmail" width="130" hight="100" src="https://github.com/dk3775/dk3775/blob/main/assets/icons/gmail.png" />
-</a>
-<h1 align='center'>⚡️<i>Stay awesome!</i>"CYA"⚡️</h1>
+<br />
+![Aarshit's GitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Aarshit-33&hide=html,css,java,shaderlab,kotlin,hlsl&theme=midnight-purple) <img src="assets/bye.gif" width="65%" />
+![](https://github.com/Aarshit-33/Aarshit-33/blob/main/assets/bye.gif)

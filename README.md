@@ -49,6 +49,8 @@ const Aarshit = {
 # 📊 Github Stats :
 
 ![Aarshit's GitHub stats](https://github-readme-stats.vercel.app/api?username=Aarshit-33&show_icons=true&theme=midnight-purple)
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Aarshit-33&theme=midnight-purple&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
+![Aarshit's GitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Aarshit-33&hide=html,css,java,shaderlab,kotlin,hlsl&theme=midnight-purple)
 <br />
-![Aarshit's GitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Aarshit-33&hide=html,css,java,shaderlab,kotlin,hlsl&theme=midnight-purple) <img src="assets/bye.png" width="65%" />
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Aarshit-33&theme=midnight-purple&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
+
+ <img src="assets/bye.png" width="65%" align="center" />

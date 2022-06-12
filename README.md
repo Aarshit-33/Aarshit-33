@@ -1,6 +1,7 @@
-<h2> Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">, I'm Aarshit Jolapara</h2>
-
+#
 <img src="assets/intro.png" width="100%" />
+
+# Somthing About Me :
 
 ```javascript
 const Aarshit = {
@@ -22,6 +23,7 @@ const Aarshit = {
     },
 };
 ```
+
 # Follow Me :
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin&logoColor=white)](https://linkedin.com/in/aarshit-jolapara) &nbsp;
@@ -46,6 +48,5 @@ const Aarshit = {
 
 ![Aarshit's GitHub stats](https://github-readme-stats.vercel.app/api?username=Aarshit-33&show_icons=true&theme=midnight-purple)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Aarshit-33&theme=midnight-purple&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
-
-
-<img src="assets/bye.gif" width="100%" />
+<br />
+![Aarshit's GitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Aarshit-33&hide=html,css,java,shaderlab,kotlin,hlsl&theme=midnight-purple) <img src="assets/bye.gif" width="65%" />

@@ -1,19 +1,19 @@
 <h2> Hi there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25">, I'm Aarshit Jolapara</h2>
 
-I'm a Software Engineering Student. 
-    I love Programming <img src="assets/helloWorld.gif" width="40" /> ,Listing Songs <img src="assets/music.gif" width="40" />, Gaming <img src="assets/gaming.gif" width="40" /> and Traveling <img src="assets/travel.gif" width="40" />.
-
+<img src="assets/intro.png" width="100%" />
 
 ```javascript
 const Aarshit = {
     pronouns: "He/Him",
-    code: ["HTML", "CSS", "JS", "PHP"],
-    Framework: ["Bootstrap","Tailwind","Wordpress"],
+    framework: ["Bootstrap","Tailwind","Wordpress"],
     tools: [VS Code, GitHub],
     askMeAbout: ["Database", "BackEnd", "FrontEnd", "Anything"],
     technologies: {
         backEnd: {
             code: ["PHP","JS"],
+        },
+        frontEnd: {
+            code: ["HTML","CSS","JS"],
         },
         mobileApp: {
             native: ["Still learning"]
@@ -28,7 +28,7 @@ const Aarshit = {
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-00acee?style=flat-square&logo=Twitter&logoColor=white)](https://twitter.com/arshit_jolapara) &nbsp;
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white)](https://instagram.com/aarshit_jolapara/) &nbsp;
 
-### 🛠 &nbsp;Languages and Tools :
+# 🛠 &nbsp;Languages and Tools :
 
 <p>
 <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
@@ -42,14 +42,10 @@ const Aarshit = {
 </p>
 
 
-### 📊 Github Stats :
+# 📊 Github Stats :
 
 ![Aarshit's GitHub stats](https://github-readme-stats.vercel.app/api?username=Aarshit-33&show_icons=true&theme=midnight-purple)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Aarshit-33&theme=midnight-purple&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
 
-# Contact Me :
 
-<a href="mailto:aarshitjolapara11@gmail.com">
- <img align="left" alt="Gmail" width="130" hight="100" src="https://github.com/dk3775/dk3775/blob/main/assets/icons/gmail.png" />
-</a>
-<h1 align='center'>⚡️<i>Stay awesome!</i>"CYA"⚡️</h1>
+<img src="assets/bye.gif" width="100%" />

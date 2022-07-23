@@ -18,7 +18,7 @@
 
 - 😄 Pronouns: He/His
 
-- 👨‍💻 Check out my personal  **<a href="https://aarshit.netlify.app/" target="_blank">Portfolio</a>**
+- 👨‍💻 Check out my personal  **Comming Soon**
 
 - 💬 Ask me about ☟
 

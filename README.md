@@ -18,7 +18,7 @@
 
 - 😄 Pronouns: He/His
 
-- 👨‍💻 Check out my personal  **Comming Soon**
+- 👨‍💻 Check out my personal Portfolio **Comming Soon**
 
 - 💬 Ask me about ☟
 

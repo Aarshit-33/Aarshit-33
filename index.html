@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Arshit Jolapara | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;family=Space+Grotesk:wght@600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#354e00",
+                        "surface-container-high": "#292931",
+                        "inverse-primary": "#476800",
+                        "primary-fixed-dim": "#a4d64c",
+                        "on-surface": "#e3e1ec",
+                        "tertiary": "#fffdff",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#c3c9b2",
+                        "primary": "#fefff1",
+                        "secondary-container": "#474649",
+                        "error": "#ffb4ab",
+                        "surface-container": "#1e1f26",
+                        "surface-dim": "#12131a",
+                        "surface-tint": "#a4d64c",
+                        "inverse-on-surface": "#2f3038",
+                        "surface-container-low": "#1a1b22",
+                        "on-primary": "#233600",
+                        "primary-fixed": "#bff365",
+                        "on-error": "#690005",
+                        "background": "#12131a",
+                        "on-background": "#e3e1ec",
+                        "surface": "#12131a",
+                        "tertiary-fixed": "#e4e1e6",
+                        "on-tertiary-fixed": "#1b1b1e",
+                        "on-tertiary": "#303033",
+                        "tertiary-container": "#e3e0e4",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c8c6c8",
+                        "secondary-fixed": "#e5e1e4",
+                        "on-secondary-fixed-variant": "#474649",
+                        "tertiary-fixed-dim": "#c8c5ca",
+                        "on-tertiary-fixed-variant": "#47464a",
+                        "on-secondary": "#313032",
+                        "surface-container-highest": "#33343c",
+                        "outline": "#8d937e",
+                        "primary-container": "#bef264",
+                        "outline-variant": "#434938",
+                        "on-primary-fixed": "#131f00",
+                        "on-primary-container": "#4b6e00",
+                        "secondary-fixed-dim": "#c8c6c8",
+                        "surface-container-lowest": "#0d0e15",
+                        "on-tertiary-container": "#646366",
+                        "on-secondary-container": "#b7b4b7",
+                        "inverse-surface": "#e3e1ec",
+                        "surface-bright": "#383941",
+                        "on-secondary-fixed": "#1c1b1d",
+                        "surface-variant": "#33343c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin": "48px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": [
+                            "Inter"
+                        ],
+                        "label-caps": [
+                            "Space Grotesk"
+                        ],
+                        "h2": [
+                            "Space Grotesk"
+                        ],
+                        "code-md": [
+                            "Space Mono", "monospace"
+                        ],
+                        "body-md": [
+                            "Inter"
+                        ],
+                        "display": [
+                            "Space Grotesk"
+                        ],
+                        "h1": [
+                            "Space Grotesk"
+                        ]
+                    },
+                    "fontSize": {
+                        "body-lg": [
+                            "clamp(16px, 2vw, 18px)",
+                            {
+                                "lineHeight": "1.6",
+                                "letterSpacing": "0",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "label-caps": [
+                            "12px",
+                            {
+                                "lineHeight": "1",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "h2": [
+                            "clamp(20px, 3vw, 24px)",
+                            {
+                                "lineHeight": "1.3",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "code-md": [
+                            "clamp(12px, 1.5vw, 14px)",
+                            {
+                                "lineHeight": "1.5",
+                                "letterSpacing": "0",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "1.6",
+                                "letterSpacing": "0",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "display": [
+                            "clamp(40px, 6vw, 64px)",
+                            {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.04em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "h1": [
+                            "clamp(28px, 5vw, 40px)",
+                            {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .orbital-ring {
+            border: 1px solid #27272a;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#09090b] text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-black overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#09090b]/95 backdrop-blur z-40 hidden flex-col items-center justify-center space-y-8 font-code-md uppercase tracking-tighter text-lg">
+        <a href="#root" class="mobile-link text-[#bef264] hover:text-[#bef264]/80 transition-colors">root</a>
+        <a href="#stack" class="mobile-link text-zinc-400 hover:text-[#bef264] transition-colors">stack</a>
+        <a href="#logs" class="mobile-link text-zinc-400 hover:text-[#bef264] transition-colors">logs</a>
+        <a href="#projects" class="mobile-link text-zinc-400 hover:text-[#bef264] transition-colors">projects</a>
+        <a href="#services" class="mobile-link text-zinc-400 hover:text-[#bef264] transition-colors">services</a>
+        <a href="#contact" class="mobile-link text-zinc-400 hover:text-[#bef264] transition-colors">contact</a>
+    </div>
+
+    <!-- Top NavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-[#09090b]/90 backdrop-blur border-b border-[#27272a] flex justify-between items-center px-6 md:px-12 h-16 w-full">
+        <div class="font-code-md font-bold text-[#bef264] tracking-widest uppercase">
+            SYS_ARCH
+        </div>
+        <button id="menu-btn" class="md:hidden text-zinc-400 hover:text-[#bef264] transition-colors z-50 relative">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+        <nav class="hidden md:flex space-x-8 font-code-md uppercase tracking-tighter text-xs">
+            <a class="text-[#bef264] border-b border-[#bef264] pb-1 cursor-terminal pulse-on-hover hover:bg-[#bef264]/10 hover:text-[#bef264] transition-all"
+                href="#root">root</a>
+            <a class="text-zinc-500 hover:text-zinc-300 transition-colors cursor-terminal pulse-on-hover hover:bg-[#bef264]/10 hover:text-[#bef264] transition-all"
+                href="#stack">stack</a>
+            <a class="text-zinc-500 hover:text-zinc-300 transition-colors cursor-terminal pulse-on-hover hover:bg-[#bef264]/10 hover:text-[#bef264] transition-all"
+                href="#logs">logs</a>
+            <a class="text-zinc-500 hover:text-zinc-300 transition-colors cursor-terminal pulse-on-hover hover:bg-[#bef264]/10 hover:text-[#bef264] transition-all"
+                href="#projects">projects</a>
+            <a class="text-zinc-500 hover:text-zinc-300 transition-colors cursor-terminal pulse-on-hover hover:bg-[#bef264]/10 hover:text-[#bef264] transition-all"
+                href="#services">services</a>
+        </nav>
+        <div class="hidden md:block">
+            <a href="#contact"
+                class="inline-block font-code-md uppercase tracking-tighter text-xs text-zinc-500 hover:text-zinc-300 transition-colors cursor-terminal pulse-on-hover hover:bg-[#bef264]/10 hover:text-[#bef264] transition-all border border-zinc-800 px-4 py-2 hover:border-[#bef264]">Connect</a>
+        </div>
+    </header>
+    <main
+        class="flex-grow pt-24 px-6 md:px-12 lg:px-margin max-w-container-max mx-auto w-full space-y-20 md:space-y-32 pb-20 md:pb-32 overflow-hidden md:overflow-visible">
+        <!-- Hero Section -->
+        <section
+            class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter items-center min-h-[calc(100vh-8rem)] md:min-h-[716px] py-12 md:py-0"
+            id="root">
+            <div
+                class="col-span-1 md:col-span-8 space-y-6 md:space-y-8 text-center md:text-left flex flex-col items-center md:items-start">
+                <div class="space-y-4">
+                    <p
+                        class="font-code-md text-primary-container text-code-md flex items-center justify-center md:justify-start gap-2">
+                        <span class="material-symbols-outlined text-sm">terminal</span>
+                        init_sequence: start
+                    </p>
+                    <h1 class="font-display text-display text-tertiary">
+                        Arshit Jolapara
+                    </h1>
+                    <h2 class="font-h2 text-h2 text-secondary">
+                        Software Engineer
+                    </h2>
+                </div>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Software Engineer with experience building scalable web applications and REST APIs across frontend
+                    and backend systems. Focused on writing clean, maintainable, and reliable code.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 pt-4 w-full sm:w-auto">
+                    <a class="inline-flex items-center justify-center px-6 py-3 bg-primary-container text-black font-label-caps text-label-caps hover:shadow-[0_0_15px_rgba(190,242,100,0.3)] transition-all border border-primary-container"
+                        href="#projects">
+                        VIEW WORK
+                    </a>
+                    <a class="inline-flex items-center justify-center px-6 py-3 bg-transparent text-primary-container font-label-caps text-label-caps border border-zinc-800 hover:border-primary-container transition-all"
+                        href="Arshit Jolapara.pdf" target="_blank">
+                        <span class="material-symbols-outlined text-sm mr-2">download</span> RESUME
+                    </a>
+                    <div class="flex items-center gap-4 ml-0 sm:ml-2">
+                        <a class="text-zinc-400 hover:text-primary-container transition-colors"
+                            href="https://github.com/aarshit-33" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a class="text-zinc-400 hover:text-primary-container transition-colors"
+                            href="https://www.linkedin.com/in/aarshitjolapara" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1 md:col-span-4 flex justify-center md:justify-end mt-8 md:mt-0">
+                <div
+                    class="w-48 h-48 md:w-64 md:h-64 border border-[#27272a] relative flex items-center justify-center bg-[#18181b]">
+                    <div
+                        class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(190,242,100,0.1)_0%,transparent_70%)]">
+                    </div>
+                    <span class="material-symbols-outlined text-5xl md:text-6xl text-zinc-700">architecture</span>
+                    <div class="absolute bottom-4 right-4 font-code-md text-[10px] text-zinc-600">SYS_V_1.0</div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter border-t border-[#27272a] pt-16">
+            <div class="col-span-1 md:col-span-4">
+                <h2 class="font-h1 text-h1 text-tertiary flex items-center gap-4">
+                    <span class="w-8 h-[2px] bg-primary-container"></span>
+                    About
+                </h2>
+            </div>
+            <div class="col-span-1 md:col-span-8 font-body-lg text-body-lg text-on-surface-variant space-y-6">
+                <p>
+                    Software Engineer with experience building scalable web applications and REST APIs across frontend
+                    and backend systems. Skilled in React, Node.js, Express, and SQL/NoSQL databases, with practical
+                    experience delivering production features, migrating systems, and supporting CI/CD pipelines using
+                    Azure DevOps.
+                </p>
+                <p>
+                    Strong foundation in data structures, algorithms, and distributed system concepts, with a focus on
+                    writing clean, maintainable, and reliable code. I approach development as an architectural
+                    discipline—building robust foundations that support long-term scalability and business objectives.
+                </p>
+                <div class="mt-8 pt-8 border-t border-[#27272a] grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <div class="font-code-md text-primary-container mb-4 text-xs tracking-widest uppercase">
+                            ACHIEVEMENTS</div>
+                        <ul class="text-sm space-y-3">
+                            <li
+                                class="relative before:content-['>'] before:absolute before:-left-4 before:text-primary-container pl-4">
+                                Smart India Hackathon 2023 - 3rd/90 teams</li>
+                            <li
+                                class="relative before:content-['>'] before:absolute before:-left-4 before:text-primary-container pl-4">
+                                LeetCode Rating: 1924 (650+ problems)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="font-code-md text-primary-container mb-4 text-xs tracking-widest uppercase">
+                            EDUCATION</div>
+                        <ul class="text-sm space-y-3">
+                            <li
+                                class="relative before:content-['>'] before:absolute before:-left-4 before:text-primary-container pl-4">
+                                B.Tech CSE - Nirma University (7.51 CGPA)</li>
+                            <li
+                                class="relative before:content-['>'] before:absolute before:-left-4 before:text-primary-container pl-4">
+                                Diploma CE - Darshan Institute (9.65 CGPA)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Orbital Skills Section -->
+        <section
+            class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter border-t border-[#27272a] pt-16 min-h-[600px] md:h-[800px] relative"
+            id="stack">
+            <div class="col-span-1 md:col-span-12 absolute top-16 left-6 md:left-0 z-10">
+                <h2 class="font-h1 text-h1 text-tertiary flex items-center gap-4">
+                    <span class="w-8 h-[2px] bg-primary-container"></span>
+                    Tech Stack
+                </h2>
+            </div>
+            <div class="col-span-1 md:col-span-12 h-full relative flex items-center justify-center mt-24">
+                <div
+                    class="scale-[0.45] sm:scale-75 md:scale-100 relative w-[700px] h-[700px] flex items-center justify-center">
+                    <!-- Orbital Rings -->
+                    <div class="orbital-ring w-[300px] h-[300px]"></div>
+                    <div class="orbital-ring w-[500px] h-[500px]"></div>
+                    <div class="orbital-ring w-[700px] h-[700px]"></div>
+
+                    <!-- Center Sun -->
+                    <div
+                        class="absolute w-32 h-32 bg-[#18181b] border border-primary-container rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(190,242,100,0.2)] z-10">
+                        <span
+                            class="font-label-caps text-label-caps text-primary-container text-center">CORE<br>TECH</span>
+                    </div>
+
+                    <!-- Orbit 1: Frontend -->
+                    <div class="orbit-1 absolute top-[50%] left-[50%] w-[300px] h-[300px] -ml-[150px] -mt-[150px]">
+                        <div
+                            class="orbit-1-inner absolute -top-6 left-1/2 bg-[#09090b] border border-[#27272a] px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                            <span class="font-code-md text-code-md text-secondary whitespace-nowrap">React / JS</span>
+                        </div>
+                    </div>
+
+                    <!-- Orbit 2: Backend -->
+                    <div class="orbit-2 absolute top-[50%] left-[50%] w-[500px] h-[500px] -ml-[250px] -mt-[250px]">
+                        <div
+                            class="orbit-2-inner absolute top-1/2 -right-6 bg-[#09090b] border border-[#27272a] px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                            <span class="font-code-md text-code-md text-secondary whitespace-nowrap">Node.js /
+                                Express</span>
+                        </div>
+                        <div
+                            class="orbit-2-inner absolute top-1/2 -left-8 bg-[#09090b] border border-[#27272a] px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                            <span class="font-code-md text-code-md text-secondary whitespace-nowrap">PostgreSQL /
+                                MongoDB</span>
+                        </div>
+                    </div>
+
+                    <!-- Orbit 3: Tools -->
+                    <div class="orbit-3 absolute top-[50%] left-[50%] w-[700px] h-[700px] -ml-[350px] -mt-[350px]">
+                        <div
+                            class="orbit-3-inner absolute bottom-0 left-1/2 bg-[#09090b] border border-[#27272a] px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-zinc-500"></span>
+                            <span class="font-code-md text-code-md text-zinc-500 whitespace-nowrap">Git / Azure
+                                DevOps</span>
+                        </div>
+                        <div
+                            class="orbit-3-inner-2 absolute top-0 left-1/2 bg-[#09090b] border border-[#27272a] px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-zinc-500"></span>
+                            <span class="font-code-md text-code-md text-zinc-500 whitespace-nowrap">C++ / Java /
+                                Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience Section (Execution Log) -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter border-t border-[#27272a] pt-16" id="logs">
+            <div class="col-span-1 md:col-span-4">
+                <h2 class="font-h1 text-h1 text-tertiary flex items-center gap-4">
+                    <span class="w-8 h-[2px] bg-primary-container"></span>
+                    Execution Log
+                </h2>
+            </div>
+            <div class="col-span-1 md:col-span-8 space-y-6 md:space-y-8 font-code-md text-code-md">
+                <!-- Log Entry 1 -->
+                <div class="border border-[#27272a] bg-[#18181b] p-6 relative">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
+                    <div
+                        class="flex flex-col sm:flex-row justify-between items-start mb-4 border-b border-[#27272a] pb-4 gap-4 sm:gap-0">
+                        <div>
+                            <div class="text-primary-container font-bold text-base md:text-sm">Associate Software
+                                Engineer</div>
+                            <div class="text-zinc-500">Infocusp Innovations</div>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <div class="text-secondary">[FEB 2026 - CURRENT]</div>
+                            <div
+                                class="text-xs text-primary-container bg-primary-container/10 px-2 py-1 mt-1 border border-primary-container/30 inline-block">
+                                STATUS: ACTIVE</div>
+                        </div>
+                    </div>
+                    <ul class="text-secondary space-y-2 list-none pl-4">
+                        <li class="relative before:content-['>'] before:absolute before:-left-4 before:text-zinc-600">
+                            Develop full-stack web application features across React and Node.js.</li>
+                        <li class="relative before:content-['>'] before:absolute before:-left-4 before:text-zinc-600">
+                            Collaborate with cross-functional teams to deliver scalable features.</li>
+                        <li class="relative before:content-['>'] before:absolute before:-left-4 before:text-zinc-600">
+                            Contribute to API integrations and data flow improvements.</li>
+                    </ul>
+                </div>
+                <!-- Log Entry 2 -->
+                <div class="border border-[#27272a] bg-transparent p-6 relative">
+                    <div
+                        class="flex flex-col sm:flex-row justify-between items-start mb-4 border-b border-[#27272a] pb-4 gap-4 sm:gap-0">
+                        <div>
+                            <div class="text-tertiary font-bold text-base md:text-sm">Software Engineer 1</div>
+                            <div class="text-zinc-500">MAQ Software</div>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <div class="text-zinc-600">[JAN 2025 - JAN 2026]</div>
+                            <div class="text-xs text-zinc-500 border border-zinc-700 px-2 py-1 mt-1 inline-block">
+                                STATUS: RESOLVED</div>
+                        </div>
+                    </div>
+                    <ul class="text-zinc-400 space-y-2 list-none pl-4">
+                        <li class="relative before:content-['>'] before:absolute before:-left-4 before:text-zinc-600">
+                            Contributed to migration of a production web platform to modern stack.</li>
+                        <li class="relative before:content-['>'] before:absolute before:-left-4 before:text-zinc-600">
+                            Implemented features using React, Node.js, and integrated REST APIs.</li>
+                        <li class="relative before:content-['>'] before:absolute before:-left-4 before:text-zinc-600">
+                            Assisted setting up Azure DevOps CI/CD pipelines.</li>
+                    </ul>
+                </div>
+                <!-- Log Entry 3 -->
+                <div class="border border-[#27272a] bg-transparent p-6 relative">
+                    <div
+                        class="flex flex-col sm:flex-row justify-between items-start mb-4 border-b border-[#27272a] pb-4 gap-4 sm:gap-0">
+                        <div>
+                            <div class="text-tertiary font-bold text-base md:text-sm">Full Stack Intern</div>
+                            <div class="text-zinc-500">Datacare Softech</div>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <div class="text-zinc-600">[MAY 2024 - JUL 2024]</div>
+                            <div class="text-xs text-zinc-500 border border-zinc-700 px-2 py-1 mt-1 inline-block">
+                                STATUS: RESOLVED</div>
+                        </div>
+                    </div>
+                    <ul class="text-zinc-400 space-y-2 list-none pl-4">
+                        <li class="relative before:content-['>'] before:absolute before:-left-4 before:text-zinc-600">
+                            Built reusable React frontend components.</li>
+                        <li class="relative before:content-['>'] before:absolute before:-left-4 before:text-zinc-600">
+                            Developed REST APIs using Node.js and Express.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter border-t border-[#27272a] pt-16"
+            id="projects">
+            <div class="col-span-1 md:col-span-12 mb-4 md:mb-8">
+                <h2 class="font-h1 text-h1 text-tertiary flex items-center gap-4">
+                    <span class="w-8 h-[2px] bg-primary-container"></span>
+                    Projects
+                </h2>
+            </div>
+            <!-- Project 1 -->
+            <div
+                class="col-span-1 md:col-span-6 border border-[#27272a] bg-[#18181b] group hover:border-primary-container transition-colors relative overflow-hidden flex flex-col min-h-[300px]">
+                <div
+                    class="h-8 border-b border-[#27272a] bg-[#09090b] flex items-center px-4 justify-between group-hover:border-primary-container transition-colors">
+                    <div class="flex gap-2">
+                        <span class="w-3 h-3 rounded-full border border-zinc-700"></span>
+                        <span class="w-3 h-3 rounded-full border border-zinc-700"></span>
+                        <span class="w-3 h-3 rounded-full border border-zinc-700"></span>
+                    </div>
+                    <span class="font-code-md text-[10px] text-zinc-500">money_maven.exe</span>
+                </div>
+                <div class="p-6 md:p-8 flex-grow space-y-4 md:space-y-6">
+                    <h3 class="font-h2 text-h2 text-primary-container">MoneyMeven</h3>
+                    <p class="font-body-md text-body-md text-secondary">
+                        Web application for tracking income/expenses with clean dashboards and analytics. Focuses on
+                        clear data flows and modular API design.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 md:pt-4">
+                        <span
+                            class="border border-zinc-700 px-3 py-1 font-code-md text-[10px] text-zinc-400">React</span>
+                        <span
+                            class="border border-zinc-700 px-3 py-1 font-code-md text-[10px] text-zinc-400">Node.js</span>
+                        <span
+                            class="border border-zinc-700 px-3 py-1 font-code-md text-[10px] text-zinc-400">Express</span>
+                        <span
+                            class="border border-zinc-700 px-3 py-1 font-code-md text-[10px] text-zinc-400">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 pt-0 mt-auto">
+                    <a class="inline-flex items-center gap-2 font-code-md text-code-md text-zinc-400 hover:text-primary-container transition-colors"
+                        href="https://github.com/aarshit-33" target="_blank">
+                        [VIEW_GITHUB] <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div
+                class="col-span-1 md:col-span-6 border border-[#27272a] bg-transparent group hover:border-primary-container transition-colors relative overflow-hidden flex flex-col min-h-[300px]">
+                <div
+                    class="h-8 border-b border-[#27272a] bg-[#09090b] flex items-center px-4 justify-between group-hover:border-primary-container transition-colors">
+                    <div class="flex gap-2">
+                        <span class="w-3 h-3 rounded-full border border-zinc-700"></span>
+                        <span class="w-3 h-3 rounded-full border border-zinc-700"></span>
+                        <span class="w-3 h-3 rounded-full border border-zinc-700"></span>
+                    </div>
+                    <span class="font-code-md text-[10px] text-zinc-500">ai_quizzer.exe</span>
+                </div>
+                <div class="p-6 md:p-8 flex-grow space-y-4 md:space-y-6">
+                    <h3 class="font-h2 text-h2 text-tertiary group-hover:text-primary-container transition-colors">AI
+                        Quizzer</h3>
+                    <p class="font-body-md text-body-md text-zinc-400">
+                        Microservices-based quiz system with separate services for auth, quiz logic, and AI-driven
+                        question generation using an API gateway.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 md:pt-4">
+                        <span
+                            class="border border-zinc-700 px-3 py-1 font-code-md text-[10px] text-zinc-400">React</span>
+                        <span
+                            class="border border-zinc-700 px-3 py-1 font-code-md text-[10px] text-zinc-400">Node.js/Python</span>
+                        <span
+                            class="border border-zinc-700 px-3 py-1 font-code-md text-[10px] text-zinc-400">MongoDB</span>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 pt-0 mt-auto">
+                    <a class="inline-flex items-center gap-2 font-code-md text-code-md text-zinc-400 hover:text-primary-container transition-colors"
+                        href="https://github.com/aarshit-33" target="_blank">
+                        [VIEW_GITHUB] <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter border-t border-[#27272a] pt-16"
+            id="services">
+            <div class="col-span-1 md:col-span-12 mb-4 md:mb-8">
+                <h2 class="font-h1 text-h1 text-tertiary flex items-center gap-4">
+                    <span class="w-8 h-[2px] bg-primary-container"></span>
+                    Services
+                </h2>
+            </div>
+            <div class="col-span-1 md:col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-gutter">
+                <!-- Service 1 -->
+                <div class="border border-[#27272a] p-6 hover:bg-[#18181b] transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-3xl md:text-4xl text-zinc-600 group-hover:text-primary-container transition-colors mb-4 block service-icon">web</span>
+                    <h3 class="font-h2 text-body-lg font-bold text-tertiary mb-2">Web App Dev</h3>
+                    <p class="font-code-md text-sm text-zinc-500">End-to-end full-stack architectures.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="border border-[#27272a] p-6 hover:bg-[#18181b] transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-3xl md:text-4xl text-zinc-600 group-hover:text-primary-container transition-colors mb-4 block service-icon">api</span>
+                    <h3 class="font-h2 text-body-lg font-bold text-tertiary mb-2">API Development</h3>
+                    <p class="font-code-md text-sm text-zinc-500">RESTful and GraphQL interfaces.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="border border-[#27272a] p-6 hover:bg-[#18181b] transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-3xl md:text-4xl text-zinc-600 group-hover:text-primary-container transition-colors mb-4 block service-icon">speed</span>
+                    <h3 class="font-h2 text-body-lg font-bold text-tertiary mb-2">System Optimization</h3>
+                    <p class="font-code-md text-sm text-zinc-500">Latency reduction and scaling.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="border border-[#27272a] p-6 hover:bg-[#18181b] transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-3xl md:text-4xl text-zinc-600 group-hover:text-primary-container transition-colors mb-4 block service-icon">smart_toy</span>
+                    <h3 class="font-h2 text-body-lg font-bold text-tertiary mb-2">Automation</h3>
+                    <p class="font-code-md text-sm text-zinc-500">Custom business automation.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter border-t border-[#27272a] pt-16"
+            id="contact">
+            <!-- Contact Info -->
+            <div class="col-span-1 md:col-span-4 space-y-8">
+                <div>
+                    <h2 class="font-h1 text-h2 text-tertiary mb-4 font-bold">Contact Info</h2>
+                    <p class="font-body-md text-zinc-400 mb-6">
+                        Open for new opportunities and collaborations. Feel free to reach out.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="mailto:aarshitjolapara11@gmail.com"
+                            class="flex items-center gap-3 text-zinc-400 hover:text-primary-container transition-colors">
+                            <span class="material-symbols-outlined text-xl">mail</span>
+                            <span class="font-code-md text-sm break-all">aarshitjolapara11@gmail.com</span>
+                        </a>
+                        <a href="tel:+918320481381"
+                            class="flex items-center gap-3 text-zinc-400 hover:text-primary-container transition-colors">
+                            <span class="material-symbols-outlined text-xl">phone_iphone</span>
+                            <span class="font-code-md text-sm">+91 8320481381</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/aarshitjolapara" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center gap-3 text-zinc-400 hover:text-primary-container transition-colors">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                            <span class="font-code-md text-sm">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/aarshit-33" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center gap-3 text-zinc-400 hover:text-primary-container transition-colors">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            <span class="font-code-md text-sm">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-span-1 md:col-span-8">
+                <div class="border border-[#27272a] bg-[#18181b] p-6 md:p-8">
+                    <h2 class="font-h1 text-h2 text-tertiary mb-8 font-bold border-b border-[#27272a] pb-4">Establish
+                        Connection</h2>
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        <!-- Web3Forms settings -->
+                        <input type="hidden" name="access_key" value="ad036015-f7a4-4b2f-a5cb-4c06f7b803c1">
+                        <input type="hidden" name="subject" value="New Connection from Portfolio!">
+                        <input type="hidden" name="from_name" value="SYS_ARCH Portfolio">
+
+                        <div class="space-y-2">
+                            <label
+                                class="font-code-md text-[10px] text-zinc-500 uppercase tracking-widest block">IDENTIFIER</label>
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-zinc-700 focus:border-primary-container focus:ring-0 text-secondary font-code-md px-0 py-2 placeholder-zinc-700 transition-colors"
+                                placeholder="Enter Name" type="text" name="name" required />
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="font-code-md text-[10px] text-zinc-500 uppercase tracking-widest block">RETURN_ADDRESS</label>
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-zinc-700 focus:border-primary-container focus:ring-0 text-secondary font-code-md px-0 py-2 placeholder-zinc-700 transition-colors"
+                                placeholder="Enter Email" type="email" name="email" required />
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="font-code-md text-[10px] text-zinc-500 uppercase tracking-widest block">PAYLOAD</label>
+                            <textarea
+                                class="w-full bg-transparent border-0 border-b border-zinc-700 focus:border-primary-container focus:ring-0 text-secondary font-code-md px-0 py-2 placeholder-zinc-700 resize-none transition-colors"
+                                placeholder="Enter Message" rows="4" name="message" required></textarea>
+                        </div>
+                        <div class="pt-4">
+                            <button id="submit-btn"
+                                class="connect-btn w-full bg-primary-container text-black font-label-caps text-label-caps py-4 hover:bg-[#a4d64c] transition-colors flex justify-center items-center gap-2"
+                                type="submit">
+                                <span id="submit-text">INITIALIZE_CONNECTION</span> <span id="submit-icon"
+                                    class="material-symbols-outlined text-sm">send</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="w-full border-t border-[#27272a] bg-[#09090b] flex flex-col sm:flex-row justify-between items-center px-6 md:px-12 py-8 font-mono text-[10px] uppercase tracking-widest text-[#bef264] gap-4 sm:gap-0">
+        <div class="text-zinc-600 text-center sm:text-left">
+            ©2024_KERNEL_INIT
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 sm:space-x-8 text-zinc-600">
+            <span class="hover:text-[#bef264] transition-colors">LATENCY: 24MS</span>
+            <span class="hover:text-[#bef264] transition-colors">STATUS: OPERATIONAL</span>
+            <span class="hover:text-[#bef264] transition-colors">UPTIME: 99.9%</span>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                gsap.fromTo(mobileMenu, { opacity: 0 }, { opacity: 1, duration: 0.3 });
+                gsap.fromTo(mobileLinks, { y: 20, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, duration: 0.4, delay: 0.1 });
+            } else {
+                gsap.to(mobileMenu, {
+                    opacity: 0, duration: 0.3, onComplete: () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex');
+                    }
+                });
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                gsap.to(mobileMenu, {
+                    opacity: 0, duration: 0.3, onComplete: () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex');
+                    }
+                });
+            });
+        });
+
+        // Initial load animations
+        const tl = gsap.timeline();
+
+        tl.from("header", { y: -100, opacity: 0, duration: 1, ease: "power3.out" })
+            .from("#root h1", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.5")
+            .from("#root h2", { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from("#root p", { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from("#root .flex.gap-4", { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from("#root .w-48, #root .w-64", { scale: 0.8, opacity: 0, rotation: 15, duration: 1, ease: "back.out(1.7)" }, "-=0.8");
+
+        // Continuous floating animation for hero box
+        gsap.to("#root .w-48, #root .w-64", {
+            y: 15,
+            rotation: 2,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        // Scroll Animations for Sections
+        gsap.utils.toArray("section:not(#root)").forEach(section => {
+            gsap.from(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+
+        // Animate lines under headings
+        gsap.utils.toArray("h2 .bg-primary-container").forEach(line => {
+            gsap.from(line, {
+                scrollTrigger: {
+                    trigger: line,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                },
+                width: 0,
+                duration: 0.8,
+                ease: "power2.out"
+            });
+        });
+
+        // Stagger Log Entries
+        gsap.from("#logs .border", {
+            scrollTrigger: {
+                trigger: "#logs",
+                start: "top 75%",
+            },
+            y: 30,
+            opacity: 0,
+            stagger: 0.2,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+
+        // Stagger Projects
+        gsap.from("#projects > div.border", {
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top 75%",
+            },
+            y: 40,
+            opacity: 0,
+            stagger: 0.2,
+            duration: 0.8,
+            ease: "power3.out"
+        });
+
+        // Stagger Services
+        gsap.from("#services .group", {
+            scrollTrigger: {
+                trigger: "#services",
+                start: "top 80%",
+            },
+            scale: 0.9,
+            opacity: 0,
+            stagger: 0.15,
+            duration: 0.6,
+            ease: "back.out(1.5)"
+        });
+
+        // Continuous floating for services icons
+        gsap.to(".service-icon", {
+            y: -5,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.2,
+            ease: "sine.inOut"
+        });
+
+        // Orbits setup and continuous animation
+        gsap.set(".orbit-1-inner", { xPercent: -50 });
+        gsap.set(".orbit-2-inner", { yPercent: -50 });
+        gsap.set(".orbit-3-inner", { xPercent: -50, yPercent: 50 });
+        gsap.set(".orbit-3-inner-2", { xPercent: -50, yPercent: -50 });
+
+        gsap.to(".orbit-1", { rotation: 360, duration: 20, repeat: -1, ease: "none" });
+        gsap.to(".orbit-1-inner", { rotation: -360, duration: 20, repeat: -1, ease: "none" });
+
+        gsap.to(".orbit-2", { rotation: -360, duration: 30, repeat: -1, ease: "none" });
+        gsap.to(".orbit-2-inner", { rotation: 360, duration: 30, repeat: -1, ease: "none" });
+
+        gsap.to(".orbit-3", { rotation: 360, duration: 40, repeat: -1, ease: "none" });
+        gsap.to(".orbit-3-inner", { rotation: -360, duration: 40, repeat: -1, ease: "none" });
+        gsap.to(".orbit-3-inner-2", { rotation: -360, duration: 40, repeat: -1, ease: "none" });
+
+        // Subtle continuous pulse on connect button
+        gsap.to(".connect-btn", {
+            boxShadow: "0 0 15px rgba(190,242,100,0.4)",
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        // Active Navigation Highlight
+        const sections = gsap.utils.toArray("section[id]");
+        const navLinks = document.querySelectorAll('header nav a');
+        const mobileNavLinks = document.querySelectorAll('#mobile-menu a.mobile-link');
+        const connectBtnNav = document.querySelector('header .hidden.md\\:block a[href="#contact"]');
+
+        function setActiveNav(id) {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.remove('text-zinc-500', 'hover:text-zinc-300');
+                    link.classList.add('text-[#bef264]', 'border-b', 'border-[#bef264]', 'pb-1');
+                } else {
+                    link.classList.add('text-zinc-500', 'hover:text-zinc-300');
+                    link.classList.remove('text-[#bef264]', 'border-b', 'border-[#bef264]', 'pb-1');
+                }
+            });
+
+            mobileNavLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.remove('text-zinc-400', 'hover:text-[#bef264]');
+                    link.classList.add('text-[#bef264]', 'hover:text-[#bef264]/80');
+                } else {
+                    link.classList.add('text-zinc-400', 'hover:text-[#bef264]');
+                    link.classList.remove('text-[#bef264]', 'hover:text-[#bef264]/80');
+                }
+            });
+
+            if (connectBtnNav) {
+                if (id === 'contact') {
+                    connectBtnNav.classList.remove('text-zinc-500', 'border-zinc-800');
+                    connectBtnNav.classList.add('text-[#bef264]', 'border-[#bef264]');
+                } else {
+                    connectBtnNav.classList.add('text-zinc-500', 'border-zinc-800');
+                    connectBtnNav.classList.remove('text-[#bef264]', 'border-[#bef264]');
+                }
+            }
+        }
+
+        sections.forEach(section => {
+            ScrollTrigger.create({
+                trigger: section,
+                start: "top 50%",
+                end: "bottom 50%",
+                onEnter: () => setActiveNav(section.getAttribute("id")),
+                onEnterBack: () => setActiveNav(section.getAttribute("id"))
+            });
+        });
+
+        // Form AJAX Submission
+        const contactForm = document.getElementById("contact-form");
+        const submitBtn = document.getElementById("submit-btn");
+        const submitText = document.getElementById("submit-text");
+        const submitIcon = document.getElementById("submit-icon");
+
+        if (contactForm) {
+            contactForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // Show loading state
+                submitBtn.disabled = true;
+                submitBtn.classList.add("opacity-70");
+                submitText.textContent = "TRANSMITTING...";
+                submitIcon.textContent = "hourglass_empty";
+                gsap.to(submitIcon, { rotation: 360, duration: 1, repeat: -1, ease: "linear" });
+
+                fetch(contactForm.action, {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Success state
+                            gsap.killTweensOf(submitIcon);
+                            submitIcon.style.transform = "none";
+                            submitBtn.classList.remove("bg-primary-container", "text-black");
+                            submitBtn.classList.add("bg-green-600", "text-white");
+                            submitText.textContent = "TRANSMISSION_SUCCESSFUL";
+                            submitIcon.textContent = "check_circle";
+
+                            contactForm.reset();
+
+                            // Reset after 3 seconds
+                            setTimeout(() => {
+                                submitBtn.disabled = false;
+                                submitBtn.classList.remove("opacity-70", "bg-green-600", "text-white");
+                                submitBtn.classList.add("bg-primary-container", "text-black");
+                                submitText.textContent = "INITIALIZE_CONNECTION";
+                                submitIcon.textContent = "send";
+                            }, 3000);
+                        } else {
+                            throw new Error(data.message || "Failed to transmit");
+                        }
+                    })
+                    .catch(error => {
+                        // Error state
+                        gsap.killTweensOf(submitIcon);
+                        submitIcon.style.transform = "none";
+                        submitBtn.classList.remove("bg-primary-container", "text-black");
+                        submitBtn.classList.add("bg-red-600", "text-white");
+                        submitText.textContent = "TRANSMISSION_FAILED";
+                        submitIcon.textContent = "error";
+
+                        // Reset after 3 seconds
+                        setTimeout(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove("opacity-70", "bg-red-600", "text-white");
+                            submitBtn.classList.add("bg-primary-container", "text-black");
+                            submitText.textContent = "INITIALIZE_CONNECTION";
+                            submitIcon.textContent = "send";
+                        }, 3000);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

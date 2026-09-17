@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#04070a">
+
+  <!-- SEO Meta -->
+  <title>GrowthGrid — Built for Growth, Not Just Design</title>
+  <meta name="description" content="GrowthGrid is a growth-focused digital product studio. We build websites, software, and systems designed to help businesses grow — not just look good.">
+  <meta name="keywords" content="web development, UI UX design, SEO, analytics, CMS, performance optimization, backend development, AI chatbots, automation, digital growth partner">
+  <meta name="author" content="GrowthGrid">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://growthgrid.studio">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GrowthGrid — Built for Growth, Not Just Design">
+  <meta property="og:description" content="We don't just build websites. We build digital products designed to help businesses grow. Strategy, design, engineering — one system at a time.">
+  <meta property="og:url" content="https://growthgrid.studio">
+  <meta property="og:site_name" content="GrowthGrid">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GrowthGrid — Built for Growth, Not Just Design">
+  <meta name="twitter:description" content="We build digital products designed to help businesses grow — not just look good.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "GrowthGrid",
+    "description": "Growth-focused digital product studio specializing in web development, UI/UX design, SEO, analytics, and AI-powered automation.",
+    "url": "https://growthgrid.studio",
+    "serviceType": ["Web Development", "UI/UX Design", "SEO", "Analytics", "CMS", "Performance Optimization", "Backend Development", "AI Chatbots", "Automation", "Maintenance"],
+    "areaServed": "Worldwide",
+    "knowsAbout": ["Digital Products", "Growth Engineering", "Web Applications", "Business Automation"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.169.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.169.0/examples/jsm/"}}</script>
+  <style>
+    :root{--bg:#04070a;--bg2:#080d12;--ink:#e8eef2;--dim:#aebac4;--muted:#71808d;--line:rgba(140,170,190,.13);--em:#3ce49a;--hot:#7dffc4;--deep:#0f6b47;--gut:clamp(24px,5vw,74px);--max:1680px;--ease:cubic-bezier(.16,1,.3,1)}
+    *{box-sizing:border-box}html{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;scroll-behavior:auto}body{margin:0;overflow-x:hidden;background:var(--bg);font-weight:300}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+    #bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}#glfall{position:fixed;inset:0;z-index:0;opacity:0;pointer-events:none;background:radial-gradient(ellipse at 67% 48%,rgba(60,228,154,.18),transparent 34%),linear-gradient(135deg,#071923,#04070a 57%,#101e21);transition:opacity 1s}
+    html.no-gl #glfall{opacity:1}main,.foot{position:relative;z-index:4}.grain,.vignette{position:fixed;inset:0;pointer-events:none}.grain{z-index:2;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");animation:grain 7s steps(6) infinite}.vignette{z-index:1;background:radial-gradient(ellipse at center,transparent 38%,rgba(2,4,6,.62) 100%)}
+    @keyframes grain{0%,100%{transform:translate(0)}20%{transform:translate(2%,-3%)}40%{transform:translate(-3%,2%)}60%{transform:translate(3%,3%)}80%{transform:translate(-2%,-2%)}}
+    header{position:fixed;top:0;left:0;width:100%;height:82px;padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;z-index:70;border-bottom:1px solid transparent;transition:background .5s,border-color .5s,backdrop-filter .5s}header.scrolled{background:rgba(4,7,10,.7);backdrop-filter:blur(18px);border-color:var(--line)}.brand{font-family:"Space Grotesk";font-weight:600;letter-spacing:-.04em;font-size:19px}.brand i{display:inline-block;width:8px;height:8px;margin:0 5px 2px 0;border-radius:50%;background:var(--em);box-shadow:0 0 18px var(--em)}nav{display:flex;gap:30px;align-items:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}nav a{transition:color .3s}nav a:hover{color:var(--hot)}.nav-cta{padding:11px 17px;border:1px solid rgba(60,228,154,.45);border-radius:3px;color:var(--hot)}
+    #rail{position:fixed;right:var(--gut);top:50%;transform:translateY(-50%);z-index:65;display:grid;gap:11px}.rail-item{display:flex;align-items:center;gap:10px;justify-content:flex-end;color:var(--muted);font:10px "Space Grotesk";letter-spacing:.12em}.rail-item b{display:block;width:22px;height:1px;background:var(--muted);transition:width .35s,background .35s}.rail-item.active{color:var(--hot)}.rail-item.active b{width:42px;background:var(--em);box-shadow:0 0 10px var(--em)}
+    section{position:relative}
+    .hero{height:100svh;min-height:680px;display:flex;align-items:center;padding:100px var(--gut) 50px}
+    .hero-copy{max-width:760px}
+    .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--em);font-weight:500;margin:0 0 24px}
+    .hero h1{font:600 clamp(48px,7vw,106px)/.92 "Space Grotesk";letter-spacing:-.06em;margin:0 0 30px;max-width:850px}
+    .hero h1 em{font-style:normal;color:var(--hot)}
+    .lede{font-size:clamp(16px,1.4vw,20px);line-height:1.7;color:var(--dim);max-width:42ch;margin:0}
+    .actions{display:flex;align-items:center;gap:25px;margin-top:42px;flex-wrap:wrap}
+    .button{padding:15px 22px;border:1px solid rgba(60,228,154,.6);background:var(--em);color:#03100a;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:transform .3s,box-shadow .3s;cursor:pointer}
+    .button:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(60,228,154,.2)}
+    .button-ghost{padding:15px 22px;border:1px solid var(--line);background:transparent;color:var(--dim);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;transition:transform .3s,border-color .3s,color .3s;cursor:pointer}
+    .button-ghost:hover{transform:translateY(-3px);border-color:var(--em);color:var(--hot)}
+    .scroll-cue{position:absolute;left:var(--gut);bottom:37px;color:var(--muted);font-size:10px;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:13px}.scroll-cue:before{content:"";width:34px;height:1px;background:var(--em)}
+    #journey{height:1150vh}
+    .j-sticky{position:sticky;top:0;height:100svh;min-height:600px;display:flex;align-items:center;padding:80px var(--gut)}
+    .stage-slot{position:relative;width:min(480px,44vw);min-height:400px;margin-left:max(0px,5vw);display:flex;align-items:center;will-change:transform}
+    .stage{position:absolute;inset:0;display:flex;justify-content:center;flex-direction:column;opacity:0;visibility:hidden;pointer-events:none;will-change:transform,opacity}
+    .stage h2{font:500 clamp(29px,3.6vw,50px)/.98 "Space Grotesk";letter-spacing:-.05em;margin:5px 0 19px}
+    .stage p{color:var(--dim);line-height:1.7;max-width:36ch;margin:0;font-size:15px}
+    .stage .count{font:500 11px "Space Grotesk";letter-spacing:.2em;color:var(--em)}
+    .stage .rule{height:1px;width:68px;background:var(--em);margin:22px 0;box-shadow:0 0 12px rgba(60,228,154,.6)}
+    .stage .tag{margin-top:26px;font-size:10px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
+    .stage .tag b{color:var(--hot);font-weight:400}
+    .stage-note{position:absolute;right:var(--gut);bottom:45px;color:var(--muted);font-size:10px;letter-spacing:.16em;text-transform:uppercase;will-change:transform}
+    .stage-note strong{color:var(--hot);font-weight:400}
+    #impact{padding:100px var(--gut);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px;max-width:var(--max);margin:0 auto}
+    .impact-item{text-align:center}
+    .impact-item .num{font:600 clamp(36px,5vw,60px)/1 "Space Grotesk";letter-spacing:-.04em;color:var(--hot);display:block;margin-bottom:12px}
+    .impact-item .label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+    #philosophy{padding:120px var(--gut);max-width:900px;margin:0 auto}
+    #philosophy .eyebrow{margin-bottom:32px}
+    #philosophy h2{font:500 clamp(32px,4.5vw,52px)/1.1 "Space Grotesk";letter-spacing:-.04em;margin:0 0 28px}
+    #philosophy h2 em{font-style:normal;color:var(--hot)}
+    #philosophy p{color:var(--dim);font-size:clamp(15px,1.3vw,18px);line-height:1.75;margin:0 0 20px;max-width:60ch}
+    #philosophy p:last-of-type{margin-bottom:0}
+    #close{min-height:80svh;padding:130px var(--gut) 90px;display:flex;align-items:center}
+    .close-inner{width:100%;max-width:var(--max);margin:auto}
+    .close h2{font:500 clamp(38px,6.5vw,92px)/.94 "Space Grotesk";letter-spacing:-.06em;max-width:850px;margin:0 0 30px}
+    .close h2 em{font-style:normal;color:var(--hot)}
+    .close p{color:var(--dim);font-size:16px;line-height:1.7;max-width:40ch;margin:0 0 38px}
+    .foot{padding:30px var(--gut);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:10px;letter-spacing:.15em;text-transform:uppercase;flex-wrap:wrap;gap:12px}
+    .foot a{color:var(--hot)}
+    @media(max-width:900px){#rail{display:none}.hero{min-height:620px}.hero h1{max-width:650px}.j-sticky{padding-top:90px;align-items:flex-end;padding-bottom:14vh}.stage-slot{width:min(530px,80vw);margin-left:0}.stage-note{right:24px;bottom:28px}.grain{opacity:.1}}
+    @media(max-width:600px){header{height:68px;padding:0 20px}nav a:not(.nav-cta){display:none}nav{gap:0}.nav-cta{padding:9px 12px}.hero{padding:90px 24px 40px;min-height:650px}.hero h1{font-size:clamp(42px,13vw,68px)}.actions{gap:14px;margin-top:32px}.button,.button-ghost{padding:14px 16px}.j-sticky{padding:80px 24px 12vh}.stage-slot{width:100%;min-height:330px}.stage h2{font-size:clamp(28px,8vw,39px)}.stage p{font-size:14px}.stage-note{left:24px;right:auto}#impact{padding:60px 24px}.impact-grid{gap:32px}#philosophy{padding:80px 24px}.close{padding:100px 24px 70px}.foot{padding:25px 24px;gap:16px;flex-direction:column;text-align:center}}
+    html.shot .stage{opacity:1!important;transform:none!important}html.shot .grain{display:none}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.grain{animation:none}.button,.button-ghost{transition:none}}
+  </style>
+</head>
+<body>
+  <header id="nav" role="banner">
+    <a class="brand" href="#hero" aria-label="GrowthGrid home"><i></i>growthgrid</a>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="#journey">What we build</a>
+      <a href="#philosophy">Why us</a>
+      <a href="#close">Contact</a>
+      <a class="nav-cta" href="mailto:hello@growthgrid.studio" id="nav-cta-link">Let's talk ↗</a>
+    </nav>
+  </header>
+  <div id="rail" aria-label="Service stages"></div>
+  <canvas id="bg" aria-hidden="true"></canvas><div id="glfall"></div><div class="vignette"></div><div class="grain"></div>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Growth-focused digital product studio</p>
+        <h1>Built for <em>growth,</em><br>not just design.</h1>
+        <p class="lede">We don't just build websites. We build digital products — engineered to attract customers, automate operations, and compound your business growth.</p>
+        <div class="actions">
+          <a class="button" href="#journey" id="hero-cta-explore">See how we do it</a>
+          <a class="button-ghost" href="#close" id="hero-cta-contact">Start a conversation</a>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll to explore</div>
+    </section>
+    <section id="journey" aria-label="Our services and approach">
+      <div class="j-sticky"><div class="stage-slot">
+        <article class="stage active" id="stage-websites"><span class="count">01 / 09</span><h2>Your website is<br>the engine.</h2><div class="rule"></div><p>Not a brochure. Not a template. A fast, purposeful digital product that works around the clock — converting visitors into customers while you focus on the business.</p><span class="tag">Website Development <b>↗</b></span></article>
+        <article class="stage" id="stage-design"><span class="count">02 / 09</span><h2>Design that<br>converts.</h2><div class="rule"></div><p>Beautiful interfaces are table stakes. We design experiences grounded in how real users behave — every layout, flow, and micro-interaction exists to move people toward a decision.</p><span class="tag">UI/UX Design <b>↗</b></span></article>
+        <article class="stage" id="stage-seo"><span class="count">03 / 09</span><h2>Be found by the<br>people who need you.</h2><div class="rule"></div><p>Ranking is not vanity — it is distribution. We build SEO into the architecture from day one, so your business shows up exactly when it matters most.</p><span class="tag">Search Engine Optimization <b>↗</b></span></article>
+        <article class="stage" id="stage-analytics"><span class="count">04 / 09</span><h2>Know what's working.<br>Fix what isn't.</h2><div class="rule"></div><p>Guesswork is expensive. We set up analytics that give you clear, actionable signals — so every decision you make is backed by evidence, not assumptions.</p><span class="tag">Analytics &amp; Insights <b>↗</b></span></article>
+        <article class="stage" id="stage-cms"><span class="count">05 / 09</span><h2>Your content,<br>your control.</h2><div class="rule"></div><p>You shouldn't need a developer to update a headline. We build content management systems that give your team full control — publish, edit, and iterate without waiting on anyone.</p><span class="tag">Content Management <b>↗</b></span></article>
+        <article class="stage" id="stage-performance"><span class="count">06 / 09</span><h2>Speed is a feature<br>your competitors ignore.</h2><div class="rule"></div><p>Every second of load time costs conversions. We obsess over Core Web Vitals, image delivery, and runtime performance — because fast products feel trustworthy.</p><span class="tag">Performance Optimization <b>↗</b></span></article>
+        <article class="stage" id="stage-backend"><span class="count">07 / 09</span><h2>The systems<br>behind the screen.</h2><div class="rule"></div><p>APIs, databases, admin panels, internal dashboards — the infrastructure that makes everything work. We build backends that scale with your ambition, not against it.</p><span class="tag">Backend &amp; Dashboards <b>↗</b></span></article>
+        <article class="stage" id="stage-ai"><span class="count">08 / 09</span><h2>Let machines handle<br>the repetitive.</h2><div class="rule"></div><p>AI chatbots that actually help your customers. Workflows that run themselves. We put automation where it compounds your team's time and sharpens your competitive edge.</p><span class="tag">AI Chatbots &amp; Automation <b>↗</b></span></article>
+        <article class="stage" id="stage-maintenance"><span class="count">09 / 09</span><h2>Growth doesn't<br>stop at launch.</h2><div class="rule"></div><p>Software needs care. We provide ongoing monitoring, security updates, and iterative improvements — so your digital product keeps performing as the business evolves.</p><span class="tag">Ongoing Maintenance <b>↗</b></span></article>
+      </div><div class="stage-note">GrowthGrid / <strong>built for growth</strong></div></div>
+    </section>
+    <section id="impact" aria-label="Our impact in numbers">
+      <div class="impact-grid">
+        <div class="impact-item"><span class="num" id="stat-speed">2.1s</span><span class="label">Avg. load time we deliver</span></div>
+        <div class="impact-item"><span class="num" id="stat-conversion">3.2×</span><span class="label">Avg. conversion lift</span></div>
+        <div class="impact-item"><span class="num" id="stat-uptime">99.9%</span><span class="label">Uptime across all clients</span></div>
+        <div class="impact-item"><span class="num" id="stat-hours">40+</span><span class="label">Hours saved per client monthly</span></div>
+      </div>
+    </section>
+    <section id="philosophy" aria-label="Our philosophy">
+      <p class="eyebrow">Why GrowthGrid</p>
+      <h2>We're not another<br><em>web agency.</em></h2>
+      <p>Most agencies hand you a website and disappear. We think that's the wrong model. A website is not the finish line — it's the starting point for growth.</p>
+      <p>We operate as your long-term digital product partner. Every decision we make — from choosing a tech stack to structuring a CTA — is filtered through one question: <strong style="color:var(--hot);font-weight:500">does this help the business grow?</strong></p>
+      <p>That means we think about your SEO before we write a line of code. We set up analytics before launch day. We build systems that your team can actually use without calling us every week. And when something needs to change, we're already watching the data.</p>
+    </section>
+    <section id="close" class="close" aria-label="Get in touch">
+      <div class="close-inner">
+        <p class="eyebrow">Ready to grow</p>
+        <h2>Your next product<br>should <em>perform.</em></h2>
+        <p>Tell us where your business is headed. We'll map out the digital product strategy, build what matters first, and help you grow from there.</p>
+        <div class="actions">
+          <a class="button" href="mailto:hello@growthgrid.studio" id="close-cta-email">hello@growthgrid.studio</a>
+          <a class="button-ghost" href="#journey" id="close-cta-services">Explore our services ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot" role="contentinfo">
+    <span>© 2025 GrowthGrid</span>
+    <span>Strategy · Design · Engineering · Growth</span>
+    <a href="#hero">Back to top ↑</a>
+  </footer>
+
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.169.0/build/three.module.js';
+    import {EffectComposer} from 'https://unpkg.com/three@0.169.0/examples/jsm/postprocessing/EffectComposer.js';
+    import {RenderPass} from 'https://unpkg.com/three@0.169.0/examples/jsm/postprocessing/RenderPass.js';
+    import {UnrealBloomPass} from 'https://unpkg.com/three@0.169.0/examples/jsm/postprocessing/UnrealBloomPass.js';
+
+    const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+    const ss=t=>t*t*(3-2*t); // smoothstep
+    const qs=new URLSearchParams(location.search);
+    const forced=qs.has('p')?clamp(parseFloat(qs.get('p'))||0,0,1):null;
+    if(forced!==null||qs.has('cap'))document.documentElement.classList.add('shot');
+
+    const stages=[...document.querySelectorAll('.stage')],rail=document.querySelector('#rail');
+    stages.forEach((_,i)=>{const el=document.createElement('div');el.className='rail-item'+(i===0?' active':'');el.innerHTML=`<span>${String(i+1).padStart(2,'0')}</span><b></b>`;rail.append(el)});
+    const railItems=[...rail.children];
+    const journey=document.querySelector('#journey'),nav=document.querySelector('#nav');
+    const slotEl=document.querySelector('.stage-slot'),noteEl=document.querySelector('.stage-note');
+    const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+    let target=forced??0,smooth=target,last=performance.now();
+    let cam,scene,renderer,composer;
+    let staircase,heroGroup,postGroup,gridGeo,pGeo,pVel;
+    let sH=1,sJ=0,sP=0,smH=1,smJ=0,smP=0;
+    let prevStage=-1;
+    /* Mouse interaction */
+    let mx=0,my=0,smx=0,smy=0;
+    addEventListener('mousemove',e=>{mx=(e.clientX/innerWidth)*2-1;my=-(e.clientY/innerHeight)*2+1},{passive:true});
+    addEventListener('touchmove',e=>{if(e.touches[0]){mx=(e.touches[0].clientX/innerWidth)*2-1;my=-(e.touches[0].clientY/innerHeight)*2+1}},{passive:true});
+
+    function progress(){if(forced!==null)return forced;const r=journey.getBoundingClientRect();return clamp(-r.top/Math.max(1,journey.offsetHeight-innerHeight),0,1)}
+
+    function updateScroll(){
+      target=progress();
+      nav.classList.toggle('scrolled',scrollY>40);
+      const jr=journey.getBoundingClientRect(),fade=innerHeight*.4;
+      const jIn=clamp(-jr.top/fade,0,1),jOut=clamp((jr.bottom-innerHeight)/fade,0,1);
+      let rJ=ss(jIn)*ss(jOut);
+      let rH=ss(clamp(1-jIn*2.5,0,1));
+      let rP=ss(clamp(1-jOut*2.5,0,1));
+      /* Normalize so only one prop dominates — prevents overlap */
+      const wSum=rH+rJ+rP;
+      if(wSum>1){rH/=wSum;rJ/=wSum;rP/=wSum}
+      sH=rH; sJ=rJ; sP=rP;
+      const n=Math.min(stages.length-1,Math.floor(target*stages.length));
+      if(n!==prevStage){stages.forEach((s,i)=>s.classList.toggle('active',i===n));railItems.forEach((r,i)=>r.classList.toggle('active',i===n));prevStage=n}
+    }
+    addEventListener('scroll',updateScroll,{passive:true});
+    addEventListener('resize',updateScroll);
+    updateScroll();
+
+    function mtl(c,rough=.35,metal=.8,em=0){return new THREE.MeshStandardMaterial({color:c,roughness:rough,metalness:metal,emissive:em?0x0f5e3d:0,emissiveIntensity:em})}
+
+    function build(){
+      const low=qs.get('gfx')==='low'||(qs.get('gfx')!=='high'&&innerWidth<700);
+      renderer=new THREE.WebGLRenderer({canvas:document.querySelector('#bg'),antialias:!low,alpha:true,powerPreference:'high-performance'});
+      renderer.setPixelRatio(low?1:Math.min(devicePixelRatio,1.7));
+      renderer.setSize(innerWidth,innerHeight);
+      renderer.outputColorSpace=THREE.SRGBColorSpace;
+      renderer.toneMapping=THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure=1.28;
+      scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x04070a,.015);
+      cam=new THREE.PerspectiveCamera(32,innerWidth/innerHeight,.1,300);
+      scene.add(new THREE.HemisphereLight(0x91d8d1,0x071016,1.7));
+      const key=new THREE.DirectionalLight(0xb8ffdf,3.2);key.position.set(-5,12,8);scene.add(key);
+      const gp=new THREE.PointLight(0x22e894,35,28,2);gp.position.set(0,9,0);scene.add(gp);
+
+      /* ═══ HERO: Waving connected grid ═══ */
+      heroGroup=new THREE.Group();scene.add(heroGroup);
+      const GS=14,GSP=.72;
+      gridGeo=new THREE.BufferGeometry();
+      const gArr=new Float32Array(GS*GS*3);
+      for(let x=0;x<GS;x++)for(let z=0;z<GS;z++){const i=x*GS+z;gArr[i*3]=(x-GS/2)*GSP;gArr[i*3+1]=0;gArr[i*3+2]=(z-GS/2)*GSP}
+      gridGeo.setAttribute('position',new THREE.BufferAttribute(gArr,3));
+      heroGroup.add(new THREE.Points(gridGeo,new THREE.PointsMaterial({color:0x3ce49a,size:.13,transparent:true,opacity:.7,blending:THREE.AdditiveBlending,depthWrite:false})));
+      heroGroup.add(new THREE.Points(gridGeo,new THREE.PointsMaterial({color:0x7dffc4,size:.4,transparent:true,opacity:.12,blending:THREE.AdditiveBlending,depthWrite:false})));
+      const lArr=[];
+      for(let x=0;x<GS;x++)for(let z=0;z<GS;z++){const i=(x*GS+z)*3;if(x<GS-1){const j=((x+1)*GS+z)*3;lArr.push(gArr[i],gArr[i+1],gArr[i+2],gArr[j],gArr[j+1],gArr[j+2])}if(z<GS-1){const j=(x*GS+(z+1))*3;lArr.push(gArr[i],gArr[i+1],gArr[i+2],gArr[j],gArr[j+1],gArr[j+2])}}
+      const lGeo=new THREE.BufferGeometry();lGeo.setAttribute('position',new THREE.Float32BufferAttribute(lArr,3));
+      heroGroup.add(new THREE.LineSegments(lGeo,new THREE.LineBasicMaterial({color:0x3ce49a,transparent:true,opacity:.09,blending:THREE.AdditiveBlending,depthWrite:false})));
+      heroGroup.position.set(3,3.5,0);heroGroup.rotation.x=-.35;
+
+      /* ═══ STAIRCASE ═══ */
+      staircase=new THREE.Group();scene.add(staircase);
+      const rise=.38,revs=9,per=14,total=revs*per+21,R=3;
+      const tM=mtl(0x546169,.4,.82),eM=mtl(0x3ce49a,.27,.5,2.5),tG=new THREE.Group();staircase.add(tG);
+      const sh=new THREE.Shape();sh.moveTo(.4,0);sh.absarc(0,0,R,0,Math.PI*2/per-.035,false);sh.lineTo(.4*Math.cos(Math.PI*2/per-.035),.4*Math.sin(Math.PI*2/per-.035));sh.absarc(0,0,.4,Math.PI*2/per-.035,0,true);sh.closePath();
+      const g=new THREE.ExtrudeGeometry(sh,{depth:.18,bevelEnabled:true,bevelSegments:1,bevelSize:.025,bevelThickness:.025});g.rotateX(-Math.PI/2);
+      const mI=new THREE.InstancedMesh(g,tM,total),eI=new THREE.InstancedMesh(new THREE.BoxGeometry(.08,.07,.5),eM,total);
+      const d=new THREE.Object3D(),eD=new THREE.Object3D();
+      for(let i=0;i<total;i++){const a=i*2*Math.PI/per;d.position.set(0,i*rise,0);d.rotation.y=a;d.updateMatrix();mI.setMatrixAt(i,d.matrix);eD.position.set(R*Math.cos(a),i*rise+.15,R*Math.sin(a));eD.rotation.set(0,-a,0);eD.scale.set(1,1,1.7);eD.updateMatrix();eI.setMatrixAt(i,eD.matrix)}
+      tG.add(mI,eI);
+      const col=new THREE.Mesh(new THREE.CylinderGeometry(.39,.48,total*rise+.6,24),mtl(0x27353d,.28,.9));col.position.y=(total*rise)/2-.2;staircase.add(col);
+      const pts=[];for(let i=0;i<=total;i++){const a=i*2*Math.PI/per;pts.push(new THREE.Vector3(R*.96*Math.cos(a),i*rise+1.4,R*.96*Math.sin(a)))}
+      const crv=new THREE.CatmullRomCurve3(pts),seg=Math.min(900,total*9);
+      staircase.add(new THREE.Mesh(new THREE.TubeGeometry(crv,seg,.065,8,false),mtl(0x8eaaa8,.2,.95,1.1)));
+      staircase.add(new THREE.Mesh(new THREE.TubeGeometry(crv,seg,.16,6,false),new THREE.MeshBasicMaterial({color:0x3ce49a,transparent:true,opacity:.12,blending:THREE.AdditiveBlending,depthWrite:false})));
+      const bM=mtl(0x63747c,.3,.9);for(let i=0;i<total;i+=2){const a=i*2*Math.PI/per;const b=new THREE.Mesh(new THREE.CylinderGeometry(.026,.026,1.4,6),bM);b.position.set(R*.96*Math.cos(a),i*rise+.75,R*.96*Math.sin(a));staircase.add(b)}
+      const core=new THREE.Mesh(new THREE.CylinderGeometry(.11,.11,total*rise,16),new THREE.MeshBasicMaterial({color:0x7dffc4,transparent:true,opacity:.45,blending:THREE.AdditiveBlending}));core.position.y=total*rise/2;staircase.add(core);
+
+      /* ═══ POST: Ascending particles ═══ */
+      postGroup=new THREE.Group();scene.add(postGroup);
+      const PC=220;pGeo=new THREE.BufferGeometry();
+      const pArr=new Float32Array(PC*3);pVel=new Float32Array(PC);
+      for(let i=0;i<PC;i++){pArr[i*3]=(Math.random()-.5)*22;pArr[i*3+1]=Math.random()*30;pArr[i*3+2]=(Math.random()-.5)*22;pVel[i]=.1+Math.random()*.35}
+      pGeo.setAttribute('position',new THREE.BufferAttribute(pArr,3));
+      postGroup.add(new THREE.Points(pGeo,new THREE.PointsMaterial({color:0x3ce49a,size:.1,transparent:true,opacity:.5,blending:THREE.AdditiveBlending,depthWrite:false})));
+      postGroup.add(new THREE.Points(pGeo,new THREE.PointsMaterial({color:0x7dffc4,size:.3,transparent:true,opacity:.08,blending:THREE.AdditiveBlending,depthWrite:false})));
+      postGroup.position.set(3,3,0);
+
+      composer=new EffectComposer(renderer);composer.addPass(new RenderPass(scene,cam));composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight),.78,.72,.18));onResize();
+    }
+    function onResize(){if(!renderer)return;renderer.setSize(innerWidth,innerHeight);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
+    try{build()}catch(e){document.documentElement.classList.add('no-gl');console.warn('[GrowthGrid] WebGL unavailable',e)}
+    addEventListener('resize',onResize);
+
+    /* ═══════════════════════════════════════
+       RENDER LOOP — buttery smooth transitions
+       ═══════════════════════════════════════ */
+    function frame(now){
+      const dt=Math.min(.1,(now-last)/1000);last=now;
+      /* Slow exponential smoothing for silky crossfades */
+      const sDec=1-Math.exp(-5*dt);   // scroll tracking
+      const xDec=1-Math.exp(-6*dt); // fast section response — no laggy overlap
+      if(!reduced){smooth+=(target-smooth)*sDec;smH+=(sH-smH)*xDec;smJ+=(sJ-smJ)*xDec;smP+=(sP-smP)*xDec}
+      else{smooth=target;smH=sH;smJ=sJ;smP=sP}
+      /* Smooth mouse — slow decay so interactions never feel sudden */
+      const mDec=1-Math.exp(-1.8*dt);
+      smx+=(mx-smx)*mDec; smy+=(my-smy)*mDec;
+      if(!cam){requestAnimationFrame(frame);return}
+
+      /* Visibility + scale: props shrink away during transitions */
+      if(heroGroup){heroGroup.visible=smH>.003; if(heroGroup.visible)heroGroup.scale.setScalar(.75+smH*.25)}
+      if(staircase){staircase.visible=smJ>.003; if(staircase.visible)staircase.scale.setScalar(.75+smJ*.25)}
+      if(postGroup){postGroup.visible=smP>.003; if(postGroup.visible)postGroup.scale.setScalar(.75+smP*.25)}
+
+      /* ── HERO: Wave the grid ── */
+      if(heroGroup?.visible){
+        const pa=gridGeo.getAttribute('position'),GS=14,t=now*.001;
+        /* Mouse creates a large magnetic bump on the grid */
+        const mGridX=smx*5.5, mGridZ=smy*5.5;
+        for(let i=0;i<GS*GS;i++){
+          const x=pa.array[i*3],z=pa.array[i*3+2];
+          const wave=Math.sin(x*.5+t*.7)*Math.cos(z*.45+t*.55)*1.3;
+          const dx=x-mGridX,dz=z-mGridZ,d2=dx*dx+dz*dz;
+          const bump=5*Math.exp(-d2*.06); // big wide gaussian hill
+          pa.array[i*3+1]=wave+bump;
+        }
+        pa.needsUpdate=true;
+        const lc=heroGroup.children[2];if(lc?.geometry){const la=lc.geometry.getAttribute('position');let li=0;for(let x=0;x<GS;x++)for(let z=0;z<GS;z++){const idx=x*GS+z;const px=pa.array[idx*3],py=pa.array[idx*3+1],pz=pa.array[idx*3+2];if(x<GS-1){const n=(x+1)*GS+z;la.array[li]=px;la.array[li+1]=py;la.array[li+2]=pz;la.array[li+3]=pa.array[n*3];la.array[li+4]=pa.array[n*3+1];la.array[li+5]=pa.array[n*3+2];li+=6}if(z<GS-1){const n=x*GS+(z+1);la.array[li]=px;la.array[li+1]=py;la.array[li+2]=pz;la.array[li+3]=pa.array[n*3];la.array[li+4]=pa.array[n*3+1];la.array[li+5]=pa.array[n*3+2];li+=6}}la.needsUpdate=true}
+        /* Mouse tilts the whole grid noticeably */
+        heroGroup.rotation.y+=dt*.08;
+        heroGroup.rotation.z=smx*-.18;
+        heroGroup.rotation.x=-.35+smy*.14;
+        heroGroup.children.forEach((c,i)=>{if(c.material)c.material.opacity=[.7,.12,.09][i]*smH});
+      }
+      /* ── STAIRCASE: Rotate ── */
+      if(staircase?.visible)staircase.rotation.y=smooth*1.2;
+      /* ── POST: Rise particles ── */
+      if(postGroup?.visible){
+        const pa=pGeo.getAttribute('position'),pc=pVel.length;
+        /* Mouse repels particles in a wide radius */
+        const mPx=smx*11+3, mPz=smy*11;
+        for(let i=0;i<pc;i++){
+          pa.array[i*3+1]+=pVel[i]*dt;
+          pa.array[i*3]+=Math.sin(now*.0007+i*.6)*dt*.03;
+          /* Strong repulsion field from cursor */
+          const dx=pa.array[i*3]-mPx, dz=pa.array[i*3+2]-mPz;
+          const dist=Math.sqrt(dx*dx+dz*dz);
+          if(dist<9&&dist>.01){const f=(9-dist)*.045*dt*60;pa.array[i*3]+=dx/dist*f;pa.array[i*3+2]+=dz/dist*f}
+          if(pa.array[i*3+1]>30){pa.array[i*3+1]=-3;pa.array[i*3]=(Math.random()-.5)*22;pa.array[i*3+2]=(Math.random()-.5)*22}
+        }
+        pa.needsUpdate=true;postGroup.rotation.y+=dt*.035;
+        postGroup.children.forEach((c,i)=>{if(c.material)c.material.opacity=[.5,.08][i]*smP});
+      }
+
+      /* ═══ CAMERA: Weighted blend between three section cameras ═══ */
+      const TS=9*14,rise=.38;
+      const ht=now*.00035;
+      const hC={x:10*Math.cos(ht),y:7+Math.sin(ht*1.2)*.5,z:10*Math.sin(ht)};
+      const hL={x:3,y:3.5,z:0};
+      const orb=smooth*Math.PI*1.5+.8,jY=smooth*TS*rise+3.6,rad=8.5-Math.sin(smooth*Math.PI)*1.2,tilt=Math.sin(smooth*Math.PI*2)*.8;
+      const jC={x:Math.cos(orb)*rad,y:jY,z:Math.sin(orb)*rad};
+      const jL={x:-4,y:jY-1.2+tilt,z:0};
+      const pt=now*.00025;
+      const pC={x:8*Math.cos(pt),y:10+Math.cos(pt*1.1)*.7,z:8*Math.sin(pt)};
+      const pL={x:3,y:7,z:0};
+      const tw=Math.max(.001,smH+smJ+smP),wH=smH/tw,wJ=smJ/tw,wP=smP/tw;
+      /* Mouse parallax — clearly shifts camera so user can peer around the scene */
+      const mParX=smx*3.5, mParY=smy*2.5;
+      cam.position.set(hC.x*wH+jC.x*wJ+pC.x*wP+mParX,hC.y*wH+jC.y*wJ+pC.y*wP+mParY,hC.z*wH+jC.z*wJ+pC.z*wP);
+      cam.lookAt(hL.x*wH+jL.x*wJ+pL.x*wP,hL.y*wH+jL.y*wJ+pL.y*wP,hL.z*wH+jL.z*wJ+pL.z*wP);
+
+      /* ═══ CONTENT SYNC ═══ */
+      if(smJ>.01){
+        const dX=Math.sin(orb)*20*smJ,dY=Math.cos(orb*.6)*12*smJ;
+        if(!reduced){slotEl.style.transform=`translate(${dX}px,${dY}px)`;noteEl.style.transform=`translate(${dX*.3}px,${dY*.2}px)`}
+        const n=stages.length,nm=n-1||1;
+        for(let i=0;i<n;i++){
+          const center=i/nm,half=.85/nm;
+          const raw=1-Math.abs(smooth-center)/half,t=clamp(raw,0,1),ease=ss(t);
+          if(ease<.003){if(stages[i].style.visibility!=='hidden')stages[i].style.cssText='opacity:0;visibility:hidden;pointer-events:none;transform:none';continue}
+          const dist=smooth-center,ds=dist<0?1:-1,sl=1-ease;
+          const sx=sl*ds*Math.sin(orb+.8)*40,sy=sl*ds*25;
+          stages[i].style.cssText=`opacity:${ease*smJ};visibility:visible;pointer-events:${ease>.5?'auto':'none'};transform:${reduced?'none':`translate(${sx}px,${sy}px)`}`;
+        }
+      }else{
+        for(const s of stages)if(s.style.visibility!=='hidden')s.style.cssText='opacity:0;visibility:hidden;pointer-events:none';
+        slotEl.style.transform='none';noteEl.style.transform='none';
+      }
+      composer.render();requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  </script>
+</body>
+</html>

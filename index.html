@@ -160,6 +160,29 @@
     .tag { border: 1px solid #35484a; padding: 5px 8px; color: #c2d1cd; font-size: 10px; border-radius: 5px; }
     .text-link { display: inline-flex; gap: 9px; align-items: center; color: var(--accent); font: 11px var(--mono); font-weight: 600; transition: gap .2s; }
     .text-link:hover { gap: 15px; }
+    .case-jump { display: inline-flex; align-items: center; gap: 9px; margin-top: 23px; padding: 5px 0; border: 0; background: transparent; color: var(--accent); font: 11px var(--mono); font-weight: 650; cursor: pointer; transition: gap .2s, color .2s; }
+    .case-jump:hover, .case-jump:focus-visible { gap: 15px; color: #e2ffb4; }
+    .case-studies { margin-top: 34px; }
+    .case-studies-head { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; margin: 0 0 17px; }
+    .case-studies-head h3 { font-size: 25px; letter-spacing: -.04em; margin: 0; }
+    .case-studies-head p { max-width: 435px; margin: 0; color: var(--muted); font-size: 12px; }
+    .case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; align-items: start; }
+    .case-study { background: #101e21; border: 1px solid #395348; border-radius: 15px; overflow: hidden; transition: border-color .25s, background .25s; scroll-margin-top: 110px; }
+    .case-study:hover, .case-study[open] { border-color: #88c8938c; }
+    .case-study summary { display: grid; grid-template-columns: 1fr 36px; gap: 12px; align-items: center; min-height: 143px; padding: 23px 23px 24px; cursor: pointer; list-style: none; }
+    .case-study summary::-webkit-details-marker { display: none; }
+    .case-study summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+    .case-kicker { display: block; color: var(--accent); font: 10px var(--mono); letter-spacing: .09em; margin-bottom: 12px; }
+    .case-study summary strong { display: block; font-size: 20px; line-height: 1.25; letter-spacing: -.035em; }
+    .case-study summary small { display: block; margin-top: 9px; color: #a9bdb8; line-height: 1.55; font-size: 12px; }
+    .case-plus { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid #668b73; border-radius: 50%; color: var(--accent); font-size: 22px; line-height: 1; transition: transform .25s, background .25s; }
+    .case-study[open] .case-plus { transform: rotate(45deg); background: #c6ff8316; }
+    .case-content { padding: 0 23px 25px; border-top: 1px solid #304940; }
+    .case-content h4 { color: var(--accent); font: 10px var(--mono); letter-spacing: .08em; margin: 23px 0 7px; }
+    .case-content p { color: #bed0c9; font-size: 13px; line-height: 1.78; margin: 0; }
+    .system-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0 4px; }
+    .flow-step { border: 1px solid #426457; border-radius: 5px; padding: 7px 9px; color: #d4e6d7; background: #182b2a; font: 10px var(--mono); }
+    .flow-arrow { color: var(--accent); font-size: 14px; }
     .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
     .project-card { background: #101b20; border: 1px solid var(--line); border-radius: 14px; padding: 25px; display: flex; flex-direction: column; min-height: 265px; transition: border-color .2s, transform .2s; }
     .project-card:hover { transform: translateY(-3px); border-color: #86b9977a; }
@@ -233,7 +256,9 @@
     .orbit-node.lower-left { left: 14.64%; top: 85.36%; }
     .orbit-chip { display: flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid #54726a; background: #09161df0; border-radius: 7px; color: #e4f3e8; font: 11px var(--mono); box-shadow: 0 8px 18px #0007; white-space: nowrap; cursor: pointer; animation: orbital-counter 25s linear infinite; transition: border-color .2s, background .2s, box-shadow .2s; }
     .orbit-chip::before { content: ""; width: 6px; height: 6px; flex: none; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px #c6ff838c; }
-    .orbit-chip:hover, .orbit-chip:focus-visible, .orbit-chip.is-highlighted { border-color: var(--accent); background: #234035; box-shadow: 0 0 24px #c6ff8340; }
+    .orbit-chip:hover, .orbit-chip:focus-visible, .orbit-chip.is-highlighted { position: relative; z-index: 6; border-color: var(--accent); background: #234035; box-shadow: 0 0 24px #c6ff8340; }
+    .orbit-track:focus-within, .orbit-track:hover { z-index: 5; }
+    .orbit-track.three .orbit-chip { padding: 9px 10px; font-size: 10px; }
     .orbit-track.one .orbit-chip { animation-duration: 22s; }
     .orbit-track.two .orbit-chip { animation-duration: 34s; animation-direction: reverse; animation-delay: -8s; }
     .orbit-track.three .orbit-chip { animation-duration: 45s; animation-delay: -15s; }
@@ -298,6 +323,8 @@
       .hero h1 { font-size: clamp(54px, 11vw, 86px); }
       .hero-art { max-width: 540px; min-height: 450px; margin: 30px auto 0; }
       .feature-grid { grid-template-columns: 1fr; }
+      .case-grid { grid-template-columns: 1fr; }
+      .case-study summary { min-height: 0; }
       .project-grid { grid-template-columns: repeat(2, 1fr); }
       .section { padding-top: 76px; }
       .section-head { flex-direction: column; align-items: start; }
@@ -324,14 +351,22 @@
       .feature-visual { height: 210px; }
       .feature-body { padding: 22px; }
       .feature-body p { min-height: auto; }
+      .case-studies-head { flex-direction: column; gap: 7px; }
+      .case-study summary { padding: 20px; }
+      .case-content { padding: 0 20px 22px; }
       .project-grid, .archive-grid, .skill-legend { grid-template-columns: 1fr; }
       .jobs { padding-left: 38px; }
       .job { grid-template-columns: 1fr; gap: 11px; padding: 28px 0; }
       .job::before { left: -38px; top: 34px; }
-      .orbit-scene { width: min(100%, 420px); }
-      .orbit-sun { width: 92px; height: 92px; font-size: 10px; }
-      .orbital-ring.three, .orbit-track.three { width: 77%; }
-      .orbit-chip { font-size: 8px; padding: 7px 9px; gap: 5px; }
+      .orbit-scene { width: min(100%, 420px); aspect-ratio: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 240px 0 0; }
+      .orbital-ring { top: 117px; }
+      .orbital-ring.one { width: 112px; }
+      .orbital-ring.two { width: 180px; }
+      .orbital-ring.three { width: 225px; }
+      .orbit-sun { top: 117px; width: 92px; height: 92px; font-size: 10px; }
+      .orbit-track { display: contents; animation: none; }
+      .orbit-node { position: static; transform: none; white-space: normal; min-width: 0; }
+      .orbit-chip, .orbit-track.three .orbit-chip { width: 100%; height: 100%; min-height: 41px; justify-content: center; gap: 6px; padding: 8px 6px; font-size: 10px; white-space: normal; animation: none; text-align: center; }
       .orbit-sun strong { font-size: 10px; }
       .orbit-sun small { font-size: 7px; }
       .section-head h2 { font-size: 40px; }
@@ -370,7 +405,7 @@
         <div>
           <div class="eyebrow">Software Engineer · Ahmedabad, India</div>
           <h1 id="hero-title"><span class="line">Building</span><span class="line">what <span class="highlight">works.</span></span></h1>
-          <p class="lead">I'm <strong>Arshit Jolapara</strong>. I build frontend and full-stack products with React, Next.js, TypeScript, and Node.js. From reusable interfaces and CMS-driven websites to API integration and deployment, I like owning the work all the way to launch.</p>
+          <p class="lead">I'm <strong>Arshit Jolapara</strong>, a frontend and full-stack engineer. I built and deployed GrowthGrid Studio's animated 3D site and Xconcile's CMS-driven production website. I work across React, Next.js, TypeScript, APIs, databases, and deployment.</p>
           <div class="hero-cta">
             <a href="#work" class="button button-primary">EXPLORE MY WORK <span aria-hidden="true">↘</span></a>
             <a href="mailto:aarshitjolapara11@gmail.com" class="button button-outline">GET IN TOUCH <span aria-hidden="true">↗</span></a>
@@ -421,6 +456,7 @@
             <div class="feature-heading"><h3>GrowthGrid Studio</h3><a class="feature-open" href="https://growthgrid.studio/" target="_blank" rel="noopener noreferrer" aria-label="Visit the GrowthGrid live website"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
             <p>Designed, built, and deployed an animated software agency website. Three.js visuals and GSAP motion sit alongside a custom MongoDB-backed CMS that lets editors change the site's content without code changes. Hosted on Vercel.</p>
             <div class="tag-row"><span class="tag">Next.js</span><span class="tag">Three.js</span><span class="tag">GSAP</span><span class="tag">MongoDB</span><span class="tag">Custom CMS</span></div>
+            <button class="case-jump" type="button" data-case-target="case-growthgrid" aria-label="Read the GrowthGrid engineering case study">HOW I BUILT IT <span aria-hidden="true">↘</span></button>
           </div>
         </article>
         <article class="feature-card reveal">
@@ -433,8 +469,41 @@
             <div class="feature-heading"><h3>Xconcile</h3><a class="feature-open" href="https://xconcile.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit the Xconcile live website"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
             <p>Built a production-grade Next.js and TypeScript website with reusable templates and Sanity CMS schemas. Added dynamic sitemap behavior, caching/revalidation, Calendly and Zoho Chat integrations, and deployed on Vercel. Recorded 500+ visitors and 1,500+ page views in the first 10 days.</p>
             <div class="tag-row"><span class="tag">Next.js 16</span><span class="tag">TypeScript</span><span class="tag">Sanity</span><span class="tag">Tailwind CSS</span><span class="tag">Vercel</span></div>
+            <button class="case-jump" type="button" data-case-target="case-xconcile" aria-label="Read the Xconcile engineering case study">HOW I BUILT IT <span aria-hidden="true">↘</span></button>
           </div>
         </article>
+      </div>
+
+      <div class="case-studies">
+        <div class="case-studies-head reveal"><h3>Under the hood.</h3><p>The engineering decisions behind two production websites.</p></div>
+        <div class="case-grid">
+          <details class="case-study reveal" id="case-growthgrid">
+            <summary><span><span class="case-kicker">01 / GROWTHGRID STUDIO</span><strong>Making 3D motion feel lighter.</strong><small>Complex hero visuals, loading strategy, and a fully editable CMS.</small></span><span class="case-plus" aria-hidden="true">+</span></summary>
+            <div class="case-content">
+              <h4>THE CHALLENGE</h4>
+              <p>The 3D hero used large models. Fetching everything at once made the initial load heavier and delayed when visitors could use the page.</p>
+              <h4>HOW I APPROACHED IT</h4>
+              <p>I simplified visuals with mathematical, procedural geometry where possible, added a designed loading sequence, and faded models in and out. I also removed models that were no longer needed on screen to keep the experience responsive.</p>
+              <h4>THE STACK</h4>
+              <div class="system-flow" aria-label="GrowthGrid architecture"><span class="flow-step">Next.js site</span><span class="flow-arrow" aria-hidden="true">+</span><span class="flow-step">Three.js / GSAP</span><span class="flow-arrow" aria-hidden="true">↔</span><span class="flow-step">Custom CMS</span><span class="flow-arrow" aria-hidden="true">↔</span><span class="flow-step">MongoDB</span></div>
+              <h4>DELIVERY</h4>
+              <p>I built and deployed the site on Vercel, with a MongoDB-backed CMS that lets editors update site content without code changes.</p>
+            </div>
+          </details>
+          <details class="case-study reveal" id="case-xconcile">
+            <summary><span><span class="case-kicker">02 / XCONCILE</span><strong>Keeping CMS content and cache in sync.</strong><small>Sanity publishing, webhook-driven revalidation, and reusable pages.</small></span><span class="case-plus" aria-hidden="true">+</span></summary>
+            <div class="case-content">
+              <h4>THE CHALLENGE</h4>
+              <p>CMS edits needed to appear on the live website without letting cached content become stale.</p>
+              <h4>HOW I APPROACHED IT</h4>
+              <p>I connected Sanity publishing events to Next.js cache revalidation using webhooks. Content schemas and reusable templates made editing consistent across the production site.</p>
+              <h4>CONTENT UPDATE FLOW</h4>
+              <div class="system-flow" aria-label="Xconcile content update flow"><span class="flow-step">Sanity publish</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Webhook</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Next.js revalidation</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Updated content</span></div>
+              <h4>DELIVERY &amp; REACH</h4>
+              <p>Deployed on Vercel with a dynamic sitemap, Zoho Chat, and Calendly. The site recorded 500+ visitors and 1,500+ page views in its first 10 days.</p>
+            </div>
+          </details>
+        </div>
       </div>
 
       <div class="section-head reveal" style="margin-top:68px">
@@ -516,11 +585,11 @@
             <div class="orbit-sun"><strong id="orbit-core">CORE TECH</strong><small id="orbit-caption">SELECT A PLANET</small></div>
             <div class="orbit-track one">
               <div class="orbit-node top"><button class="orbit-chip" type="button" data-orbit-title="React" data-orbit-detail="Reusable React interfaces and components">React / JS</button></div>
-              <div class="orbit-node bottom"><button class="orbit-chip" type="button" data-orbit-title="Next.js" data-orbit-detail="TypeScript, routing, and production web apps">Next.js / TypeScript</button></div>
+              <div class="orbit-node bottom"><button class="orbit-chip" type="button" data-orbit-title="Next.js" data-orbit-detail="TypeScript, routing, and production web apps">Next.js / TS</button></div>
             </div>
             <div class="orbit-track two">
               <div class="orbit-node right"><button class="orbit-chip" type="button" data-orbit-title="Node.js" data-orbit-detail="Express services and REST API integrations">Node.js / Express</button></div>
-              <div class="orbit-node left"><button class="orbit-chip" type="button" data-orbit-title="Databases" data-orbit-detail="PostgreSQL, Prisma, and MongoDB">Postgres / MongoDB</button></div>
+              <div class="orbit-node left"><button class="orbit-chip" type="button" data-orbit-title="Databases" data-orbit-detail="PostgreSQL, Prisma, and MongoDB">SQL / MongoDB</button></div>
               <div class="orbit-node top"><button class="orbit-chip" type="button" data-orbit-title="Sanity CMS" data-orbit-detail="Content schemas and live CMS-driven sites">Sanity / CMS</button></div>
               <div class="orbit-node bottom"><button class="orbit-chip" type="button" data-orbit-title="FastAPI" data-orbit-detail="Python services and API development">Python / FastAPI</button></div>
             </div>
@@ -528,7 +597,7 @@
               <div class="orbit-node top"><button class="orbit-chip" type="button" data-orbit-title="Motion" data-orbit-detail="Three.js experiences and GSAP animation">Three.js / GSAP</button></div>
               <div class="orbit-node bottom"><button class="orbit-chip" type="button" data-orbit-title="DevOps" data-orbit-detail="Git and Azure DevOps pipelines">Git / Azure DevOps</button></div>
               <div class="orbit-node left"><button class="orbit-chip" type="button" data-orbit-title="Delivery" data-orbit-detail="Vercel hosting and CI/CD deployments">Vercel / CI/CD</button></div>
-              <div class="orbit-node right"><button class="orbit-chip" type="button" data-orbit-title="AI tools" data-orbit-detail="OpenAI APIs and hands-on agent evaluation">AI / API Integrations</button></div>
+              <div class="orbit-node right"><button class="orbit-chip" type="button" data-orbit-title="AI tools" data-orbit-detail="OpenAI APIs and hands-on agent evaluation">AI / APIs</button></div>
               <div class="orbit-node upper-right"><button class="orbit-chip" type="button" data-orbit-title="Docker" data-orbit-detail="Docker and Compose for local multi-service development (basics)">Docker / Compose</button></div>
               <div class="orbit-node lower-left"><button class="orbit-chip" type="button" data-orbit-title="Cloud basics" data-orbit-detail="Foundational AWS usage alongside Vercel and Azure delivery">AWS / Cloud</button></div>
             </div>
@@ -637,6 +706,15 @@
           });
         });
       }
+
+      document.querySelectorAll("[data-case-target]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var study = document.getElementById(button.getAttribute("data-case-target"));
+          if (!study) return;
+          study.open = true;
+          study.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+        });
+      });
 
       var elements = document.querySelectorAll(".reveal");
       if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

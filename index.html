@@ -102,7 +102,7 @@
     .hero-sightline { position: absolute; inset: 7%; border: 1px solid #b6eab32b; border-radius: 50%; transform: rotate(25deg) scaleY(.83); }
     .hero-sightline.secondary { inset: 15%; transform: rotate(-38deg) scaleY(.75); border-style: dashed; border-color: #9de2db4a; }
     .hero-cube { position: relative; width: 188px; height: 188px; transform-style: preserve-3d; animation: cube-orbit 24s infinite linear; filter: drop-shadow(0 23px 34px #0915109e); }
-    .hero-face { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(145deg, #193b38e9, #0a1a1eeb); border: 1px solid #c6ff83a6; box-shadow: inset 0 0 60px #81f4ae1e; backface-visibility: visible; }
+    .hero-face { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(145deg, #193b38e9, #0a1a1eeb); border: 1px solid #c6ff83a6; box-shadow: inset 0 0 60px #81f4ae1e; backface-visibility: hidden; }
     .hero-face::before { content: ""; position: absolute; inset: 13px; border: 1px solid #c6ff833c; }
     .hero-face span { font-size: 65px; font-weight: 820; letter-spacing: -.1em; color: var(--accent); text-shadow: 0 0 32px #c6ff8370; line-height: 1; }
     .hero-face small { position: absolute; bottom: 24px; font: 10px var(--mono); letter-spacing: .16em; color: #c8d8cb; }
@@ -117,7 +117,7 @@
     .hero-float.one { top: 12%; right: 2%; transform: rotate(5deg); }
     .hero-float.two { bottom: 18%; left: 0; animation-delay: -2s; }
     .hero-annotation { position: absolute; bottom: 10px; right: 3%; color: #88a5a0; font: 10px var(--mono); letter-spacing: .13em; }
-    @keyframes cube-orbit { 0% { transform: rotateX(-18deg) rotateY(0deg); } 100% { transform: rotateX(342deg) rotateY(360deg); } }
+    @keyframes cube-orbit { 0% { transform: rotateX(-19deg) rotateY(-29deg); } 100% { transform: rotateX(-19deg) rotateY(331deg); } }
     @keyframes gentle-float { from { translate: 0 0; } to { translate: 0 -12px; } }
     .proof-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #0e171b; }
     .proof-inner { display: grid; grid-template-columns: repeat(3, 1fr); }

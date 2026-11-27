@@ -229,6 +229,8 @@
     .orbit-node.bottom { left: 50%; top: 100%; }
     .orbit-node.right { left: 100%; top: 50%; }
     .orbit-node.left { left: 0; top: 50%; }
+    .orbit-node.upper-right { left: 85.36%; top: 14.64%; }
+    .orbit-node.lower-left { left: 14.64%; top: 85.36%; }
     .orbit-chip { display: flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid #54726a; background: #09161df0; border-radius: 7px; color: #e4f3e8; font: 11px var(--mono); box-shadow: 0 8px 18px #0007; white-space: nowrap; cursor: pointer; animation: orbital-counter 25s linear infinite; transition: border-color .2s, background .2s, box-shadow .2s; }
     .orbit-chip::before { content: ""; width: 6px; height: 6px; flex: none; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px #c6ff838c; }
     .orbit-chip:hover, .orbit-chip:focus-visible, .orbit-chip.is-highlighted { border-color: var(--accent); background: #234035; box-shadow: 0 0 24px #c6ff8340; }
@@ -250,6 +252,7 @@
     .toolbox .eyebrow-small { color: var(--accent); font-size: 10px; letter-spacing: .09em; }
     .toolbox h3 { font-size: 17px; margin: 9px 0 7px; }
     .toolbox p { font-size: 13px; line-height: 1.85; margin: 0; color: #a8bcb8; }
+    .toolbox p strong { color: #e4f3e8; font-weight: 650; }
     .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 65px; padding: 37px 0 0; border-top: 1px solid var(--line); }
     .about-grid p { color: #b1c3c0; font-size: 16px; line-height: 1.9; margin: 0 0 17px; }
     .about-grid strong { color: var(--text); font-weight: 600; }
@@ -526,15 +529,17 @@
               <div class="orbit-node bottom"><button class="orbit-chip" type="button" data-orbit-title="DevOps" data-orbit-detail="Git and Azure DevOps pipelines">Git / Azure DevOps</button></div>
               <div class="orbit-node left"><button class="orbit-chip" type="button" data-orbit-title="Delivery" data-orbit-detail="Vercel hosting and CI/CD deployments">Vercel / CI/CD</button></div>
               <div class="orbit-node right"><button class="orbit-chip" type="button" data-orbit-title="AI tools" data-orbit-detail="OpenAI APIs and hands-on agent evaluation">AI / API Integrations</button></div>
+              <div class="orbit-node upper-right"><button class="orbit-chip" type="button" data-orbit-title="Docker" data-orbit-detail="Docker and Compose for local multi-service development (basics)">Docker / Compose</button></div>
+              <div class="orbit-node lower-left"><button class="orbit-chip" type="button" data-orbit-title="Cloud basics" data-orbit-detail="Foundational AWS usage alongside Vercel and Azure delivery">AWS / Cloud</button></div>
             </div>
           </div>
           <p class="orbit-hint" aria-live="polite"><i aria-hidden="true"></i><span id="orbit-hint-text">HOVER, FOCUS OR TAP A PLANET TO EXPLORE</span></p>
         </div>
         <div class="skill-legend" aria-label="Additional technologies">
-          <div class="toolbox reveal"><span class="eyebrow-small">01 / UI</span><h3>Frontend</h3><p>React, Next.js, TypeScript, JavaScript, Tailwind CSS, HTML/CSS, Three.js, GSAP</p></div>
-          <div class="toolbox reveal"><span class="eyebrow-small">02 / SERVICES</span><h3>Backend & data</h3><p>Node.js, Express, REST APIs, Python/FastAPI, PostgreSQL, MongoDB, Prisma</p></div>
-          <div class="toolbox reveal"><span class="eyebrow-small">03 / DELIVERY</span><h3>CMS & DevOps</h3><p>Sanity, custom CMS, Vercel, Azure DevOps, Git, CI/CD, Docker/Compose basics</p></div>
-          <div class="toolbox reveal"><span class="eyebrow-small">04 / EXPLORATION</span><h3>AI & tooling</h3><p>OpenAI API, document retrieval, prompt testing, agent execution analysis, manual AI evaluation</p></div>
+          <div class="toolbox reveal"><span class="eyebrow-small">01 / UI</span><h3>Frontend</h3><p>React, Next.js, TypeScript, JavaScript, Tailwind CSS, MUI, HTML/CSS, Three.js, GSAP</p></div>
+          <div class="toolbox reveal"><span class="eyebrow-small">02 / SERVICES</span><h3>Backend & data</h3><p>Node.js, Express, REST APIs, <strong>Python, FastAPI</strong>, PostgreSQL, Prisma, MongoDB</p></div>
+          <div class="toolbox reveal"><span class="eyebrow-small">03 / DELIVERY</span><h3>CMS & DevOps</h3><p>Sanity, custom CMS, <strong>Docker & Compose (basic)</strong>, Vercel, Azure DevOps, Git, CI/CD, AWS fundamentals</p></div>
+          <div class="toolbox reveal"><span class="eyebrow-small">04 / EXPLORATION</span><h3>AI & tooling</h3><p>OpenAI API, document retrieval, agent evaluation, prompt testing, Power BI, DAX, Power Query</p></div>
         </div>
       </div>
     </section>

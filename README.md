@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/intro.png" alt="Welcome to Aarshit Jolapara's GitHub profile" width="100%" />
+  <img src="assets/intro.png" alt="Welcome to Arshit Jolapara's GitHub profile" width="100%" />
 </p>
 
-<h1 align="center">Hi, I'm Aarshit Jolapara 👋</h1>
+<h1 align="center">Hi, I'm Arshit Jolapara 👋</h1>
 <p align="center"><strong>Software Engineer · Frontend & Full-Stack Development</strong></p>
 <p align="center">React · Next.js · TypeScript · Node.js · PostgreSQL</p>
 

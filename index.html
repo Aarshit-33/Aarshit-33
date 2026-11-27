@@ -104,8 +104,9 @@
     .hero-cube { position: relative; width: 188px; height: 188px; transform-style: preserve-3d; animation: cube-orbit 24s infinite linear; filter: drop-shadow(0 23px 34px #0915109e); }
     .hero-face { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(145deg, #193b38e9, #0a1a1eeb); border: 1px solid #c6ff83a6; box-shadow: inset 0 0 60px #81f4ae1e; backface-visibility: hidden; }
     .hero-face::before { content: ""; position: absolute; inset: 13px; border: 1px solid #c6ff833c; }
-    .hero-face span { font-size: 65px; font-weight: 820; letter-spacing: -.1em; color: var(--accent); text-shadow: 0 0 32px #c6ff8370; line-height: 1; }
-    .hero-face small { position: absolute; bottom: 24px; font: 10px var(--mono); letter-spacing: .16em; color: #c8d8cb; }
+    .hero-identity { position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: 9px; pointer-events: none; text-shadow: 0 5px 25px #071211, 0 0 30px #c6ff8340; }
+    .hero-identity strong { color: var(--accent); font-size: 68px; line-height: 1; letter-spacing: -.1em; padding-right: .1em; }
+    .hero-identity span { color: #e7f9dc; font: 11px var(--mono); letter-spacing: .17em; white-space: nowrap; }
     .hero-face.front { transform: translateZ(94px); }
     .hero-face.back { transform: rotateY(180deg) translateZ(94px); }
     .hero-face.right { transform: rotateY(90deg) translateZ(94px); }
@@ -119,13 +120,19 @@
     .hero-annotation { position: absolute; bottom: 10px; right: 3%; color: #88a5a0; font: 10px var(--mono); letter-spacing: .13em; }
     @keyframes cube-orbit { 0% { transform: rotateX(-19deg) rotateY(-29deg); } 100% { transform: rotateX(-19deg) rotateY(331deg); } }
     @keyframes gentle-float { from { translate: 0 0; } to { translate: 0 -12px; } }
-    .proof-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #0e171b; }
-    .proof-inner { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .proof { padding: 27px 34px; display: flex; align-items: center; gap: 17px; border-right: 1px solid var(--line); }
-    .proof:first-child { padding-left: 0; }
-    .proof:last-child { border-right: 0; }
-    .proof strong { font-size: 36px; letter-spacing: -.055em; line-height: 1; color: var(--accent); }
-    .proof span { font-size: 11px; color: #a4b5b3; max-width: 150px; line-height: 1.5; }
+    .proof-strip { padding: 26px 0 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: radial-gradient(circle at 45% 100%, #416f4a16, transparent 55%), #0e171b; }
+    .strip-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 15px; font: 10px var(--mono); letter-spacing: .13em; color: #819d96; }
+    .strip-heading b { color: var(--accent); font-weight: 600; }
+    .proof-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .proof { position: relative; display: block; min-height: 173px; padding: 24px 24px 26px; border: 1px solid #345047; background: linear-gradient(145deg, #172a29, #101d23 75%); border-radius: 12px; overflow: hidden; transition: background .25s, border-color .25s, transform .25s, box-shadow .25s; }
+    .proof::after { content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background: var(--accent); transition: width .3s ease; }
+    .proof:hover, .proof:focus-visible { border-color: #9fcd83; background: linear-gradient(145deg, #1c352d, #14252b 75%); transform: translateY(-4px); box-shadow: 0 16px 36px #0005; }
+    .proof:hover::after, .proof:focus-visible::after { width: 100%; }
+    .proof small { display: block; color: var(--accent); font: 10px var(--mono); letter-spacing: .13em; margin-bottom: 13px; }
+    .proof strong { display: block; color: #f2f8ee; max-width: 290px; font-size: clamp(18px, 2vw, 23px); letter-spacing: -.04em; line-height: 1.2; margin-bottom: 10px; }
+    .proof span { display: block; color: #a9bdb8; font-size: 12px; line-height: 1.5; max-width: 290px; padding-right: 8px; }
+    .proof-icon { position: absolute; top: 17px; right: 18px; color: var(--accent); font: 20px var(--mono); opacity: .7; transition: transform .25s, opacity .25s; }
+    .proof:hover .proof-icon, .proof:focus-visible .proof-icon { transform: translate(3px, -3px); opacity: 1; }
     .section { padding: 105px 0 0; }
     .section-head { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 38px; }
     .section-no { display: inline-block; font-size: 11px; color: var(--accent); letter-spacing: .11em; margin-bottom: 13px; }
@@ -189,26 +196,37 @@
     .orbital-ring { position: absolute; left: 50%; top: 50%; border: 1px solid #5a796754; border-radius: 50%; transform: translate(-50%, -50%); }
     .orbital-ring.one { width: 36%; aspect-ratio: 1; }
     .orbital-ring.two { width: 64%; aspect-ratio: 1; border-style: dashed; }
-    .orbital-ring.three { width: 91%; aspect-ratio: 1; }
-    .orbit-sun { position: absolute; left: 50%; top: 50%; width: 124px; height: 124px; border: 1px solid var(--accent); border-radius: 50%; background: radial-gradient(circle at 28% 20%, #3c6842, #15231f 65%); box-shadow: 0 0 48px #b6ff8952, inset 0 0 34px #c6ff8316; transform: translate(-50%, -50%); display: grid; place-items: center; z-index: 2; text-align: center; font: 12px var(--mono); letter-spacing: .12em; color: var(--accent); }
+    .orbital-ring.three { width: 82%; aspect-ratio: 1; }
+    .orbit-sun { position: absolute; left: 50%; top: 50%; width: 124px; height: 124px; padding: 12px; border: 1px solid var(--accent); border-radius: 50%; background: radial-gradient(circle at 28% 20%, #3c6842, #15231f 65%); box-shadow: 0 0 48px #b6ff8952, inset 0 0 34px #c6ff8316; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; z-index: 2; text-align: center; color: var(--accent); }
+    .orbit-sun strong { font: 12px var(--mono); letter-spacing: .06em; }
+    .orbit-sun small { font: 8px var(--mono); letter-spacing: .05em; color: #bcd9c0; line-height: 1.35; }
     .orbit-track { position: absolute; left: 50%; top: 50%; aspect-ratio: 1; animation: orbital-spin 25s linear infinite; }
     .orbit-track.one { width: 36%; animation-duration: 22s; }
-    .orbit-track.two { width: 64%; animation-duration: 34s; animation-direction: reverse; }
-    .orbit-track.three { width: 91%; animation-duration: 45s; }
+    .orbit-track.two { width: 64%; animation-duration: 34s; animation-direction: reverse; animation-delay: -8s; }
+    .orbit-track.three { width: 82%; animation-duration: 45s; animation-delay: -15s; }
     .orbit-node { position: absolute; transform: translate(-50%, -50%); white-space: nowrap; }
     .orbit-node.top { left: 50%; top: 0; }
     .orbit-node.bottom { left: 50%; top: 100%; }
     .orbit-node.right { left: 100%; top: 50%; }
     .orbit-node.left { left: 0; top: 50%; }
-    .orbit-node span { display: flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid #54726a; background: #09161de8; border-radius: 7px; color: #e4f3e8; font: 11px var(--mono); box-shadow: 0 8px 18px #0007; animation: orbital-counter 25s linear infinite; }
-    .orbit-node span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px #c6ff838c; }
-    .orbit-track.one .orbit-node span { animation-duration: 22s; }
-    .orbit-track.two .orbit-node span { animation-duration: 34s; animation-direction: reverse; }
-    .orbit-track.three .orbit-node span { animation-duration: 45s; }
+    .orbit-chip { display: flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid #54726a; background: #09161df0; border-radius: 7px; color: #e4f3e8; font: 11px var(--mono); box-shadow: 0 8px 18px #0007; white-space: nowrap; cursor: pointer; animation: orbital-counter 25s linear infinite; transition: border-color .2s, background .2s, box-shadow .2s; }
+    .orbit-chip::before { content: ""; width: 6px; height: 6px; flex: none; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px #c6ff838c; }
+    .orbit-chip:hover, .orbit-chip:focus-visible, .orbit-chip.is-highlighted { border-color: var(--accent); background: #234035; box-shadow: 0 0 24px #c6ff8340; }
+    .orbit-track.one .orbit-chip { animation-duration: 22s; }
+    .orbit-track.two .orbit-chip { animation-duration: 34s; animation-direction: reverse; animation-delay: -8s; }
+    .orbit-track.three .orbit-chip { animation-duration: 45s; animation-delay: -15s; }
+    .orbit-scene:hover .orbit-track, .orbit-scene:hover .orbit-chip, .orbit-scene:focus-within .orbit-track, .orbit-scene:focus-within .orbit-chip { animation-play-state: paused; }
+    .orbit-spark { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 12px #9de2db95; animation: star-twinkle 2.8s ease-in-out infinite alternate; }
+    .orbit-spark.a { top: 16%; left: 20%; }.orbit-spark.b { top: 26%; right: 8%; animation-delay: -1.4s; }.orbit-spark.c { bottom: 17%; right: 23%; animation-delay: -.7s; }
+    .orbit-hint { display: flex; justify-content: center; align-items: center; gap: 9px; min-height: 32px; color: #9db8ae; font: 10px var(--mono); letter-spacing: .04em; text-align: center; }
+    .orbit-hint i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px #c6ff8370; }
+    @keyframes star-twinkle { from { opacity: .22; scale: .5; } to { opacity: 1; scale: 1.7; } }
     @keyframes orbital-spin { from { transform: translate(-50%, -50%) rotate(0); } to { transform: translate(-50%, -50%) rotate(360deg); } }
     @keyframes orbital-counter { from { transform: rotate(0); } to { transform: rotate(-360deg); } }
     .skill-legend { display: grid; gap: 12px; }
     .toolbox { background: #111d22; border: 1px solid var(--line); border-radius: 12px; padding: 19px 22px; }
+    .toolbox { transition: border-color .2s, transform .2s, background .2s; }
+    .toolbox:hover { transform: translateX(4px); border-color: #6c9b70; background: #17272a; }
     .toolbox .eyebrow-small { color: var(--accent); font-size: 10px; letter-spacing: .09em; }
     .toolbox h3 { font-size: 17px; margin: 9px 0 7px; }
     .toolbox p { font-size: 13px; line-height: 1.85; margin: 0; color: #a8bcb8; }
@@ -238,7 +256,7 @@
       .nav { gap: 15px; }
       .hero { gap: 4%; grid-template-columns: minmax(0, 1fr) minmax(300px, .82fr); }
       .hero h1 { font-size: clamp(54px, 6.6vw, 75px); }
-      .proof { padding: 22px 16px; }
+      .proof { padding: 22px 18px; }
       .orbital-layout { grid-template-columns: 1fr; }
       .skill-legend { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
@@ -260,8 +278,7 @@
       .project-grid { grid-template-columns: repeat(2, 1fr); }
       .section { padding-top: 76px; }
       .section-head { flex-direction: column; align-items: start; }
-      .proof strong { font-size: 29px; }
-      .proof { gap: 10px; }
+      .proof strong { font-size: 19px; }
       .job { grid-template-columns: 175px 1fr; gap: 20px; }
       .about-grid { grid-template-columns: 1fr; gap: 20px; }
     }
@@ -271,11 +288,12 @@
       .hero-meta { gap: 13px; }
       .hero-art { min-height: 340px; margin-top: 32px; }
       .hero-cube { scale: .68; }
+      .hero-identity strong { font-size: 51px; }
+      .hero-identity span { font-size: 9px; }
       .hero-float { font-size: 8px; padding: 8px 10px; }
       .hero-float b { font-size: 9px; }
       .proof-inner { grid-template-columns: 1fr; }
-      .proof { border-right: 0; border-bottom: 1px solid var(--line); padding: 16px 0; }
-      .proof:last-child { border-bottom: 0; }
+      .proof { min-height: 0; padding: 20px 21px; }
       .proof span { max-width: none; }
       .feature-visual { height: 210px; }
       .feature-body { padding: 22px; }
@@ -286,7 +304,10 @@
       .job::before { left: -38px; top: 34px; }
       .orbit-scene { width: min(100%, 420px); }
       .orbit-sun { width: 92px; height: 92px; font-size: 10px; }
-      .orbit-node span { font-size: 8px; padding: 7px 9px; gap: 5px; }
+      .orbital-ring.three, .orbit-track.three { width: 77%; }
+      .orbit-chip { font-size: 8px; padding: 7px 9px; gap: 5px; }
+      .orbit-sun strong { font-size: 10px; }
+      .orbit-sun small { font-size: 7px; }
       .section-head h2 { font-size: 40px; }
       .contact-panel { padding: 29px 24px; }
       .contact-panel h2 { font-size: 41px; }
@@ -332,29 +353,30 @@
             <span>Frontend / Full-stack / Product</span>
           </div>
         </div>
-        <div class="hero-art" role="img" aria-label="Animated three-dimensional AJ monogram surrounded by subtle rings and technology labels">
+        <div class="hero-art" role="img" aria-label="AJ the Builder, framed by an animated three-dimensional cube and technology labels">
           <div class="hero-sightline" aria-hidden="true"></div>
           <div class="hero-sightline secondary" aria-hidden="true"></div>
           <div class="hero-cube" aria-hidden="true">
-            <div class="hero-face front"><span>AJ</span><small>ENGINEER</small></div>
-            <div class="hero-face back"><span>AJ</span></div>
-            <div class="hero-face right"><span>AJ</span></div>
-            <div class="hero-face left"><span>AJ</span></div>
-            <div class="hero-face top"><span>AJ</span></div>
-            <div class="hero-face bottom"><span>AJ</span></div>
+            <div class="hero-face front"></div><div class="hero-face back"></div>
+            <div class="hero-face right"></div><div class="hero-face left"></div>
+            <div class="hero-face top"></div><div class="hero-face bottom"></div>
           </div>
+          <div class="hero-identity" aria-hidden="true"><strong>AJ</strong><span>THE BUILDER</span></div>
           <div class="hero-float one" aria-hidden="true"><b>FRONTEND / EXPERIENCE</b>React · Next.js · Motion</div>
           <div class="hero-float two" aria-hidden="true"><b>FULL-STACK / DELIVERY</b>APIs · CMS · Deployment</div>
-          <span class="hero-annotation">AJ / SOFTWARE ENGINEERING / 2026</span>
+          <span class="hero-annotation">AJ THE BUILDER / 2026</span>
         </div>
       </section>
     </div>
 
-    <div class="proof-strip" aria-label="Selected experience highlights">
-      <div class="container proof-inner">
-        <div class="proof"><strong>27</strong><span>pages delivered in the Xconcile production website</span></div>
-        <div class="proof"><strong>3</strong><span>deployment environments set up at MAQ Software</span></div>
-        <div class="proof"><strong>5+</strong><span>targeted AI-agent skill-file changes at Infocusp</span></div>
+    <div class="proof-strip" aria-label="Engineering highlights">
+      <div class="container">
+        <div class="strip-heading"><b>FIELD NOTES / THE WORK</b><span>EXPLORE THE PROOF BEHIND THE PORTFOLIO</span></div>
+        <div class="proof-inner">
+          <a class="proof" href="#work"><small>01 / LIVE IN PRODUCTION</small><strong>Production-grade websites</strong><span>GrowthGrid Studio and Xconcile, built for real businesses.</span><i class="proof-icon" aria-hidden="true">↗</i></a>
+          <a class="proof" href="#skills"><small>02 / UNDER THE HOOD</small><strong>Frontend to full-stack</strong><span>Responsive interfaces, APIs, databases, and CMS-driven content.</span><i class="proof-icon" aria-hidden="true">↗</i></a>
+          <a class="proof" href="#experience"><small>03 / BEYOND THE BUILD</small><strong>Shipping and maintaining</strong><span>Deployments, CI/CD, enterprise delivery, and AI workflow testing.</span><i class="proof-icon" aria-hidden="true">↗</i></a>
+        </div>
       </div>
     </div>
 
@@ -380,12 +402,12 @@
         <article class="feature-card reveal">
           <a class="feature-visual xconcile" href="https://xconcile.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the live Xconcile homepage">
             <img src="assets/xconcile-home.jpg" alt="Actual Xconcile homepage with dark blue hero, green typography, and accounting services navigation" loading="lazy" decoding="async">
-            <span class="visual-mark">27 PAGES / SANITY CMS</span><span class="preview-hint">LIVE PREVIEW ↗</span>
+            <span class="visual-mark">PRODUCTION / SANITY CMS</span><span class="preview-hint">LIVE PREVIEW ↗</span>
           </a>
           <div class="feature-body">
             <span class="feature-meta">Production website · Independent project</span>
             <h3>Xconcile</h3>
-            <p>Built a 27-page Next.js and TypeScript site with reusable templates and Sanity CMS schemas. Added dynamic sitemap behavior, caching/revalidation, Calendly and Zoho Chat integrations, and deployed on Vercel. Recorded 500+ visitors and 1,500+ page views in the first 10 days.</p>
+            <p>Built a production-grade Next.js and TypeScript website with reusable templates and Sanity CMS schemas. Added dynamic sitemap behavior, caching/revalidation, Calendly and Zoho Chat integrations, and deployed on Vercel. Recorded 500+ visitors and 1,500+ page views in the first 10 days.</p>
             <div class="tag-row"><span class="tag">Next.js 16</span><span class="tag">TypeScript</span><span class="tag">Sanity</span><span class="tag">Tailwind CSS</span><span class="tag">Vercel</span></div>
             <a class="button button-primary feature-live" href="https://xconcile.com/" target="_blank" rel="noopener noreferrer">VISIT LIVE WEBSITE <span aria-hidden="true">↗</span></a>
           </div>
@@ -421,7 +443,6 @@
         <a class="archive-item reveal" data-category="earlier" href="https://github.com/Aarshit-33/Sanjivani-Medical" target="_blank" rel="noopener noreferrer"><div><strong>Sanjivani Medical</strong><small>WordPress/WooCommerce e-commerce project</small></div><span aria-hidden="true">↗</span></a>
         <a class="archive-item reveal" data-category="earlier" href="https://github.com/Aarshit-33/AeroPrice-Flight_Fare_Prediction" target="_blank" rel="noopener noreferrer"><div><strong>AeroPrice</strong><small>Flight-fare prediction notebook</small></div><span aria-hidden="true">↗</span></a>
         <a class="archive-item reveal" data-category="earlier" href="https://github.com/Aarshit-33/AutoPulse-Car_Sales_Performance_Dashboard" target="_blank" rel="noopener noreferrer"><div><strong>AutoPulse</strong><small>Power BI car-sales performance dashboard</small></div><span aria-hidden="true">↗</span></a>
-        <a class="archive-item reveal" data-category="earlier" href="https://github.com/Aarshit-33/Front-End-Clones" target="_blank" rel="noopener noreferrer"><div><strong>Frontend Experiments</strong><small>UI recreation and layout practice</small></div><span aria-hidden="true">↗</span></a>
       </div>
       <p style="margin-top:24px"><a class="text-link" href="https://github.com/Aarshit-33?tab=repositories" target="_blank" rel="noopener noreferrer">BROWSE ALL PUBLIC REPOSITORIES <span aria-hidden="true">↗</span></a></p>
     </section>
@@ -446,12 +467,29 @@
         <p>Technologies I've used in work, client projects, and personal builds.</p>
       </div>
       <div class="orbital-layout">
-        <div class="orbit-scene reveal" role="img" aria-label="Animated solar system of technologies: React and JavaScript, Node.js and Express, PostgreSQL and MongoDB, Git and Azure DevOps, and C++, Java, and Python">
-          <div class="orbital-ring one" aria-hidden="true"></div><div class="orbital-ring two" aria-hidden="true"></div><div class="orbital-ring three" aria-hidden="true"></div>
-          <div class="orbit-sun" aria-hidden="true">CORE<br>TECH</div>
-          <div class="orbit-track one" aria-hidden="true"><div class="orbit-node top"><span>React / JS</span></div></div>
-          <div class="orbit-track two" aria-hidden="true"><div class="orbit-node right"><span>Node.js / Express</span></div><div class="orbit-node left"><span>PostgreSQL / MongoDB</span></div></div>
-          <div class="orbit-track three" aria-hidden="true"><div class="orbit-node top"><span>C++ / Java / Python</span></div><div class="orbit-node bottom"><span>Git / Azure DevOps</span></div></div>
+        <div class="orbit-module">
+          <div class="orbit-scene reveal" role="group" aria-label="Interactive orbit of tools and technologies; hover, focus, or tap a planet to explore">
+            <div class="orbital-ring one" aria-hidden="true"></div><div class="orbital-ring two" aria-hidden="true"></div><div class="orbital-ring three" aria-hidden="true"></div>
+            <div class="orbit-spark a" aria-hidden="true"></div><div class="orbit-spark b" aria-hidden="true"></div><div class="orbit-spark c" aria-hidden="true"></div>
+            <div class="orbit-sun"><strong id="orbit-core">CORE TECH</strong><small id="orbit-caption">SELECT A PLANET</small></div>
+            <div class="orbit-track one">
+              <div class="orbit-node top"><button class="orbit-chip" type="button" data-orbit-title="React" data-orbit-detail="Reusable React interfaces and components">React / JS</button></div>
+              <div class="orbit-node bottom"><button class="orbit-chip" type="button" data-orbit-title="Next.js" data-orbit-detail="TypeScript, routing, and production web apps">Next.js / TypeScript</button></div>
+            </div>
+            <div class="orbit-track two">
+              <div class="orbit-node right"><button class="orbit-chip" type="button" data-orbit-title="Node.js" data-orbit-detail="Express services and REST API integrations">Node.js / Express</button></div>
+              <div class="orbit-node left"><button class="orbit-chip" type="button" data-orbit-title="Databases" data-orbit-detail="PostgreSQL, Prisma, and MongoDB">Postgres / MongoDB</button></div>
+              <div class="orbit-node top"><button class="orbit-chip" type="button" data-orbit-title="Sanity CMS" data-orbit-detail="Content schemas and live CMS-driven sites">Sanity / CMS</button></div>
+              <div class="orbit-node bottom"><button class="orbit-chip" type="button" data-orbit-title="FastAPI" data-orbit-detail="Python services and API development">Python / FastAPI</button></div>
+            </div>
+            <div class="orbit-track three">
+              <div class="orbit-node top"><button class="orbit-chip" type="button" data-orbit-title="Motion" data-orbit-detail="Three.js experiences and GSAP animation">Three.js / GSAP</button></div>
+              <div class="orbit-node bottom"><button class="orbit-chip" type="button" data-orbit-title="DevOps" data-orbit-detail="Git and Azure DevOps pipelines">Git / Azure DevOps</button></div>
+              <div class="orbit-node left"><button class="orbit-chip" type="button" data-orbit-title="Delivery" data-orbit-detail="Vercel hosting and CI/CD deployments">Vercel / CI/CD</button></div>
+              <div class="orbit-node right"><button class="orbit-chip" type="button" data-orbit-title="AI tools" data-orbit-detail="OpenAI APIs and hands-on agent evaluation">AI / API Integrations</button></div>
+            </div>
+          </div>
+          <p class="orbit-hint" aria-live="polite"><i aria-hidden="true"></i><span id="orbit-hint-text">HOVER, FOCUS OR TAP A PLANET TO EXPLORE</span></p>
         </div>
         <div class="skill-legend" aria-label="Additional technologies">
           <div class="toolbox reveal"><span class="eyebrow-small">01 / UI</span><h3>Frontend</h3><p>React, Next.js, TypeScript, JavaScript, Tailwind CSS, HTML/CSS, Three.js, GSAP</p></div>
@@ -558,6 +596,35 @@
         elements.forEach(function (element) { observer.observe(element); });
       } else {
         elements.forEach(function (element) { element.classList.add("visible"); });
+      }
+
+      var orbitScene = document.querySelector(".orbit-scene");
+      var orbitName = document.getElementById("orbit-core");
+      var orbitCaption = document.getElementById("orbit-caption");
+      var orbitHint = document.getElementById("orbit-hint-text");
+      if (orbitScene && orbitName && orbitCaption && orbitHint) {
+        var orbitChips = Array.prototype.slice.call(orbitScene.querySelectorAll(".orbit-chip"));
+        var showOrbit = function (chip) {
+          orbitName.textContent = chip ? chip.getAttribute("data-orbit-title") : "CORE TECH";
+          orbitCaption.textContent = chip ? "IN MY TOOLBOX" : "SELECT A PLANET";
+          orbitHint.textContent = chip ? chip.getAttribute("data-orbit-detail") : "HOVER, FOCUS OR TAP A PLANET TO EXPLORE";
+          orbitChips.forEach(function (other) {
+            other.classList.toggle("is-highlighted", other === chip);
+          });
+        };
+        orbitChips.forEach(function (chip) {
+          chip.addEventListener("mouseenter", function () { showOrbit(chip); });
+          chip.addEventListener("focus", function () { showOrbit(chip); });
+          chip.addEventListener("click", function () { showOrbit(chip); });
+        });
+        orbitScene.addEventListener("mouseleave", function () {
+          if (!orbitScene.contains(document.activeElement)) showOrbit(null);
+        });
+        orbitScene.addEventListener("focusout", function () {
+          window.requestAnimationFrame(function () {
+            if (!orbitScene.contains(document.activeElement)) showOrbit(null);
+          });
+        });
       }
 
       var timeline = document.querySelector(".jobs");
